@@ -1,0 +1,11 @@
+{
+    "schemaVersion": 1,
+    "authors": [],
+    "environment": "*",
+    "name": "Time Walker Continuum",
+    "id": "timewalker",
+    "version": "1.0.0",
+    "description": "Adds Time Walker Powers to Alien Evo and Palladium",
+    "icon": "logo.png",
+    "license": "All rights reserved"
+}

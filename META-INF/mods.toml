@@ -1,0 +1,21 @@
+modLoader = 'lowcodefml'
+showAsResourcePack = false
+loaderVersion="[47,)"
+license="All rights reserved"
+
+[[mods]]
+modId="timewalker"
+displayName="Time Walker Continuum"
+version="1.0.0"
+logoFile = "logo.png"
+logoBlur = false
+description='''
+Adds Time Walker Powers to Alien Evo and Palladium
+'''
+
+[[dependencies.timewalker]]
+modId = "palladium"
+mandatory = true
+versionRange = ""
+ordering = "NONE"
+side = "BOTH"

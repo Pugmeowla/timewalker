@@ -1,0 +1,16 @@
+{
+  "pack": {
+    "id": "timewalker",
+    "description": "Adds Time Walker Powers to Alien Evo and Palladium",
+    "pack_format": 15,
+    "version": "1.0.0"
+  },
+  "dependencies": {
+    "common": {
+    },
+    "fabric": {
+    },
+    "forge": {
+    }
+  }
+}
