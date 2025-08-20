@@ -1,0 +1,1 @@
+scoreboard objectives add paradox_portal_lifetime dummy
