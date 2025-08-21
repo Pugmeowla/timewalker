@@ -1,0 +1,7 @@
+{
+    "max_stack_size": 1,
+    "rarity": "epic",
+    "is_fire_resistant": true,
+    "creative_mode_tab":"timewalker",
+    "render_layers": {"offhand": ["timewalker:chrononavigator"]}
+}
