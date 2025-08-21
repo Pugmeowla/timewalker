@@ -3,7 +3,7 @@
     "sound_type": "minecraft:stone",
     "destroy_time": 1,
     "explosion_resistance": 1,
-    "render_type": "cutout",
+    "render_type": "translucent",
     "no_occlusion": false,
     "requires_correct_tool_for_drops": false,
     "register_item": true,

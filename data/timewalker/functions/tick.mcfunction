@@ -22,3 +22,7 @@ execute as @e[type=armor_stand,tag=paradox_portal] at @s run particle minecraft:
 execute as @e[type=armor_stand,tag=paradox_portal] at @s run particle minecraft:dust 0.0 1.0 0.9 2 ~0.8839 ~0.1161 ~-0.5 0 0 0 0 1 force
 execute as @e[type=armor_stand,tag=paradox_portal] at @s run particle minecraft:dust 0.0 1.0 0.9 2 ~1.0825 ~0.375 ~-0.5 0 0 0 0 1 force
 execute as @e[type=armor_stand,tag=paradox_portal] at @s run particle minecraft:dust 0.0 1.0 0.9 2 ~1.2071 ~0.6764 ~-0.5 0 0 0 0 1 force
+
+execute if entity @e[tag=eon] run bossbar set minecraft:eon players @a
+execute store result bossbar minecraft:eon value run data get entity @e[tag=eon,limit=1] Health
+execute unless entity @e[tag=eon,limit=1] run bossbar set minecraft:eon players test

@@ -1,0 +1,7 @@
+{
+    "objectives": [
+        "chronian.XP",
+        "chronian.Level",
+        "chronian.SkillPoint"
+    ]
+}
