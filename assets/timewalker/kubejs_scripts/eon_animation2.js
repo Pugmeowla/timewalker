@@ -1,7 +1,7 @@
 PalladiumEvents.registerAnimations((event) => {
     event.register('alienevo/fakeactivations', 200, (builder) => {
         let activation = animationUtil.getAnimationTimerAbilityValue(
-            builder.getPlayer(), 'timewalker:eon_scanned', 'rollcredits', builder.getPartialTicks());
+            builder.getPlayer(), 'timewalker:eon_scanned2', 'rollcredits', builder.getPartialTicks());
         if (activation > 0 && !builder.isFirstPerson()) {
             builder.get('right_arm')
                 .setXRotDegrees(-116)
