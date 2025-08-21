@@ -1,0 +1,15 @@
+{
+  "type": "timewalker:inbetween",
+  "generator": {
+    "settings": {
+      "layers": [
+        {
+          "block": "timewalker:inbetween",
+          "height": 200
+        }
+      ],
+      "biome": "timewalker:inbetween"
+    },
+    "type": "minecraft:flat"
+  }
+}
