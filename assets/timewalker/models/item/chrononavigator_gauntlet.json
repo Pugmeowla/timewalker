@@ -3,8 +3,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "timewalker:item/chrononavigator",
-		"particle": "timewalker:item/chrononavigator"
+		"0": "timewalker:item/chrononavigator_gauntlet",
+		"particle": "timewalker:item/chrononavigator_gauntlet"
 	},
 	"elements": [
 		{

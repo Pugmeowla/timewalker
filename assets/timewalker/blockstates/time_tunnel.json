@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "timewalker:block/time_tunnel"
+    }
+  }
+}

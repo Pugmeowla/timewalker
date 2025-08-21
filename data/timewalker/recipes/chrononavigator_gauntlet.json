@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "timewalker:chrononavigator_watch"
+        }
+    ],
+    "result": {
+        "item": "timewalker:chrononavigator_gauntlet",
+        "count": 1
+    }
+}

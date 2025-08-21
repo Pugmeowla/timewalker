@@ -37,26 +37,41 @@
     "allow_scrolling_when_crouching": true
 }
                 ],
-                "unlocking":[
+                 "unlocking":[
                     {
     "type": "palladium:or",
     "conditions": [
         {
     "type": "palladium:item_in_slot",
     "item": {
-        "item": "timewalker:chrononavigator"
+        "item": "timewalker:chrononavigator_gauntlet"
     },
     "slot": "mainhand"
 },
- {
+{
     "type": "palladium:item_in_slot",
     "item": {
-        "item": "timewalker:chrononavigator"
+        "item": "timewalker:chrononavigator_gauntlet"
+    },
+    "slot": "offhand"
+},
+{
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "timewalker:chrononavigator_watch"
+    },
+    "slot": "mainhand"
+},
+{
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "timewalker:chrononavigator_watch"
     },
     "slot": "offhand"
 }
     ]
 }
+
                 ]
             }
             
@@ -88,26 +103,41 @@
                         "type": "palladium:true"
                     }
                 ],
-                 "unlocking":[
+                "unlocking":[
                     {
     "type": "palladium:or",
     "conditions": [
         {
     "type": "palladium:item_in_slot",
     "item": {
-        "item": "timewalker:chrononavigator"
+        "item": "timewalker:chrononavigator_gauntlet"
     },
     "slot": "mainhand"
 },
- {
+{
     "type": "palladium:item_in_slot",
     "item": {
-        "item": "timewalker:chrononavigator"
+        "item": "timewalker:chrononavigator_gauntlet"
+    },
+    "slot": "offhand"
+},
+{
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "timewalker:chrononavigator_watch"
+    },
+    "slot": "mainhand"
+},
+{
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "timewalker:chrononavigator_watch"
     },
     "slot": "offhand"
 }
     ]
 }
+
                 ]
             }
         },
