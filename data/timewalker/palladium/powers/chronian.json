@@ -1,5 +1,5 @@
 {
-  "name": "chronian",
+  "name": "chronian_boss",
   "icon": "minecraft:blaze_rod",
   "background": "alienevo:textures/gui/power_screen/power_screen.png",
   "primary_color": "#8ed721",
@@ -9,26 +9,6 @@
   "hidden": true,
   "abilities": {
 
-    "galvanic_mechamorph_loop": {
-      "type": "palladium:command",
-      "hidden": false,
-      "title": "Chronian Species",
-      "gui_position": [
-        0,
-        0
-      ],
-      "description": "6'4 Human Destroyer",
-      "icon": "minecraft:blaze_rod",
-      "first_tick_commands": [
-        "scoreboard objectives add chronian.XP dummy",
-        "scoreboard objectives add chronian.Level dummy",
-        "scoreboard objectives add chronian.SkillPoint dummy"
-      ],
-      "last_tick_commands": [
-      ],
-      "commands": [
-      "scoreboard players add @s[palladium.power=selfdestruct:prototype_omnitrix_sdm] AlienEvo.SelfDestruct 1"]
-    },
     "hideBody": {
       "type": "palladium:hide_body_part",
       "icon": "minecraft:blaze_rod",
@@ -66,153 +46,147 @@
       "hidden": true,
       "render_layer": "timewalker:chronian"
     },
-    "sizeChange": {
-      "type": "palladium:size",
-      "title": "Size Change",
-      "hidden": true,
-      "scale": 1.15
-    },
-    "Health": {
-      "type": "palladium:attribute_modifier",
-      "attribute": "minecraft:generic.max_health",
-      "amount": 200
-    },
-    "Strength": {
-      "type": "palladium:attribute_modifier",
-      "attribute": "minecraft:generic.attack_damage",
-      "amount": 5000
-    },
-    "knockbackResistance": {
-      "type": "palladium:attribute_modifier",
-      "attribute": "minecraft:generic.knockback_resistance",
-      "amount": 1
-    },
-    "Armor": {
-      "type": "palladium:attribute_modifier",
-      "attribute": "minecraft:generic.armor",
-      "amount": 50
-    },
-    "armorToughness": {
-      "type": "palladium:attribute_modifier",
-      "attribute": "minecraft:generic.armor_toughness",
-      "amount": 50
-    },
-    "largePunch": {
-      "title": "Large Punch",
-      "type": "palladium:projectile",
-      "hidden": true,
-      "hidden_in_bar": false,
-      "list_index": 0,
-      "entity_type": "palladium:custom_projectile",
-      "inaccuracy": 0,
-      "velocity": 4,
-      "swinging_arm": "main_arm",
-      "damage_from_player": true,
-      "entity_data": {
-        "Size": 3,
-        "Gravity": 0,
-        "Lifetime": 80,
-        "ExplosionBlockInteraction": "destroy",
-        "ExplosionRadius": 8,
-        "ExplosionCausesFire": false,
-        "KnockbackStrength": 10,
-        "DieOnBlockHit": false,
-        "DieOnEntityHit": false,
-        "Appearances": [
-          {
-            "Type": "particles",
-            "ParticleType": "minecraft:explosion_emitter",
-            "Spread": 5,
-            "Amount": 9
-          },
-          {
-            "Type": "particles",
-            "ParticleType": "minecraft:explosion",
-            "Spread": 5,
-            "Amount": 1
-          },
-          {
-            "Type": "particles",
-            "ParticleType": "minecraft:flame",
-            "Spread": 1,
-            "Amount": 15
-          }
-        ]
-      },
-      "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:action",
-            "key_type": "right_click",
-            "cooldown": 10,
-            "needs_empty_hand": false
-          }
-        ]
-      }
-    },
-    "Speed": {
-      "type": "palladium:attribute_modifier",
-      "attribute": "minecraft:generic.movement_speed",
-      "amount": 1.1,
-      "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:sprinting"
-          },
-          {
-            "type": "palladium:not",
+      "teleport": {
+            "type": "palladium:command",
+            "icon": "minecraft:clock",
+            "title": "Teleport",
+            "bar_color": "light_blue",
+             "persistent_data": true,
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 0,
+             "gui_position": [
+                0,
+                -1
+            ],
+            "description": "Teleport to wherever you look",
+            "first_tick_commands": [],
+            "last_tick_commands": [],
+            "commands": [
+                "tag @s add timewalker_teleport_tag",
+                "function timewalker:timewalker_tp_start"
+            ],
             "conditions": {
-              "type": "palladium:in_water"
+                
+                "enabling": [
+                   {
+    "type": "palladium:action",
+    "cooldown": 0,
+    "key_type": "key_bind",
+    "needs_empty_hand": false,
+    "allow_scrolling_when_crouching": true
+}
+                ],
+                 "unlocking":[
+                    {
+    "type": "palladium:or",
+    "conditions": [
+        {
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "timewalker:chrononavigator_gauntlet"
+    },
+    "slot": "mainhand"
+},
+{
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "timewalker:chrononavigator_gauntlet"
+    },
+    "slot": "offhand"
+},
+{
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "timewalker:chrononavigator_watch"
+    },
+    "slot": "mainhand"
+},
+{
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "timewalker:chrononavigator_watch"
+    },
+    "slot": "offhand"
+}
+    ]
+}
+
+                ]
             }
-          }
-        ]
-      }
+            
+        },
+        
+         "teleport_command": {
+           "type": "palladium:dummy",
+            "icon": "minecraft:clock",
+            "title": "Teleport Command",
+            "bar_color": "light_blue",
+             "persistent_data": true,
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": -1,
+            "gui_position": [
+                0,
+                -2
+            ],
+            "description": "Lets you use the timewalker_tp command, the format is timewalker_tp x y z example:example",
+            "first_tick_commands": [],
+            "last_tick_commands": [],
+            "commands": [
+                ""
+            ],
+            "conditions": {
+                
+                "enabling": [
+                    {
+                        "type": "palladium:true"
+                    }
+                ],
+                "unlocking":[
+                    {
+    "type": "palladium:or",
+    "conditions": [
+        {
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "timewalker:chrononavigator_gauntlet"
     },
-    "stepAssist": {
-      "type": "palladium:attribute_modifier",
-      "attribute": "forge:step_height_addition",
-      "amount": 2,
-      "conditions": {
-        "unlocking": [
-          {
-            "type": "palladium:ability_enabled",
-            "ability": "Speed"
-          }
-        ]
-      }
+    "slot": "mainhand"
+},
+{
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "timewalker:chrononavigator_gauntlet"
     },
-    "waterWalking": {
-      "type": "palladium:water_walk",
-      "hidden": true,
-      "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:ability_enabled",
-            "ability": "Speed"
-          }
-        ],
-        "type": "palladium:not",
-        "conditions": {
-          "type": "palladium:in_water"
-        }
-      }
+    "slot": "offhand"
+},
+{
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "timewalker:chrononavigator_watch"
     },
-    "Healing": {
-      "type": "palladium:healing",
-      "hidden": true,
-      "hidden_in_bar": true,
-      "frequency": 2,
-      "amount": 10
+    "slot": "mainhand"
+},
+{
+    "type": "palladium:item_in_slot",
+    "item": {
+        "item": "timewalker:chrononavigator_watch"
     },
-    "Flight": {
-      "type": "palladium:attribute_modifier",
-      "attribute": "palladium:flight_speed",
-      "amount": 2
-    },
-    "base_form": {
+    "slot": "offhand"
+}
+    ]
+}
+
+                ]
+            }
+        },
+         "base_form": {
       "type": "alienevo:omnitrix_detransform",
       "icon": "#alienevo:detransform",
-      "title": "Base Form",
+      "title": {
+        "translate": "ability.alienevo.omnitrix.base_form"
+      },
       "hidden": true,
       "list_index": 4,
       "conditions": {
@@ -224,36 +198,20 @@
         ],
         "unlocking": [
           {
-            "type": "palladium:has_tag",
-            "tag": "AlienEvo.BaseForm"
+            "type": "palladium:or",
+            "conditions": [
+              {
+                "type": "palladium:has_tag",
+                "tag": "AlienEvo.BaseForm"
+              },
+              {
+                "type": "palladium:has_tag",
+                "tag": "AlienEvo.MasterControl"
+              }
+            ]
           }
         ]
       }
-    },
-    "timeout_function": {
-      "type": "alienevo:omnitrix_timer",
-      "hidden": true
-    },
-    "slot_restriction": {
-      "type": "palladium:restrict_slots",
-      "hidden": true,
-      "hidden_in_bar": false,
-      "slots": [
-        "head",
-        "chest",
-        "legs",
-        "feet",
-        "trinkets:head/hat",
-        "trinkets:head/face",
-        "trinkets:chest/back",
-        "trinkets:chest/necklace",
-        "trinkets:chest/cape",
-        "trinkets:hand/ring",
-        "trinkets:hand/glove",
-        "trinkets:offhand/glove",
-        "trinkets:offhand/ring",
-        "curios:hands"
-      ]
     }
   }
 }

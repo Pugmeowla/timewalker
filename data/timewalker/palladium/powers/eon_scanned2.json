@@ -11,6 +11,26 @@
   "secondary_color": "#332e27",
   "ability_bar_texture": "alienevo:textures/gui/ability_bar/interface.png",
   "abilities": {
+      "bubble": {
+      "type": "palladium:command",
+      "hidden": false,
+      "title": "Furry Species",
+      "gui_position": [
+        0,
+        0
+      ],
+      "description": "A wolf-like alien with enhanced agility and senses, capable of unleashing powerful sonic howls and leaping great distances",
+      "icon": "alienevo:textures/gui/playlists/playlist_1/alien_209.png",
+      "first_tick_commands": [
+      ],
+      "last_tick_commands": [
+        "superpower add timewalker:transform_bubble_eon @s",
+        "playsound alienevo:prototype_failsafe master @s",
+        "playsound timewalker:prototype_warning master @s"
+      ],
+      "commands": [
+      ]
+    },
     "furry_loop": {
       "type": "palladium:command",
       "hidden": false,
@@ -260,28 +280,6 @@
         ]
       }
     },
-    "base_form": {
-      "type": "alienevo:omnitrix_detransform",
-      "icon": "#alienevo:detransform",
-      "title": {
-        "translate": "ability.alienevo.omnitrix.base_form"
-      },
-      "hidden": true,
-      "list_index": 4,
-      "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:ability_enabled",
-            "ability": "dummy"
-          },
-          {
-            "type": "palladium:interval",
-            "active_ticks": 1,
-            "disabled_ticks": 1
-          }
-        ]
-      }
-    },
      "scan_geo": {
       "type": "geckolib:render_layer_animation",
       "hidden": true,
@@ -321,6 +319,24 @@
           }
         ]
       }
-    }
+    },
+    "force_timeout":{
+    "type": "palladium:command",
+    "icon": "alienevo:textures/gui/detransform/detransform_prototype_red.png",
+    "title": "null",
+    "bar_color": "red",
+    "hidden": false,
+    "hidden_in_bar": false,
+    "list_index": 1,
+    "gui_position": "null",
+    "description": "null",
+    "first_tick_commands": [
+        "execute as @a[distance=..5] run scoreboard players set @s AlienEvo.Timer 5999",
+        "execute as @a[distance=..5] run scoreboard players set @s AlienEvo.Timer 1"
+    ],
+    "last_tick_commands": [],
+    "commands": [
+    ]
+}
   }
 }

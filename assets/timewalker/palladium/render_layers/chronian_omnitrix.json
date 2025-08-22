@@ -171,26 +171,7 @@
           }
         }
       ],
-      "texture": {
-        "base": "alienevo:textures/models/sil/alien_#X.png",
-        "transformers": [
-          {
-            "type": "palladium:color",
-            "color": "##COLOR",
-            "ignore_blank": true
-          }
-        ],
-        "variables": {
-          "X": {
-            "type": "palladium:integer_property",
-            "property": "omnitrix_cycle"
-          },
-          "COLOR": {
-            "type": "palladium:string_property",
-            "property": "sil_color"
-          }
-        }
-      },
+      "texture": "alienevo:textures/models/sil/alien_121.png",
       "conditions": [
         {
           "type": "palladium:objective_score",

@@ -12,10 +12,3 @@ logoBlur = false
 description='''
 Adds Time Walker Powers to Alien Evo and Palladium
 '''
-
-[[dependencies.timewalker]]
-modId = "palladium"
-mandatory = true
-versionRange = ""
-ordering = "NONE"
-side = "BOTH"

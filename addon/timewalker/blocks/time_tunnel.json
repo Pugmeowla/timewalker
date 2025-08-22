@@ -4,7 +4,7 @@
     "destroy_time": 1,
     "explosion_resistance": 1,
     "render_type": "translucent",
-    "no_occlusion": false,
+    "no_occlusion": true,
     "requires_correct_tool_for_drops": false,
     "register_item": true,
     "creative_mode_tab": "timewalker:timewalker"
