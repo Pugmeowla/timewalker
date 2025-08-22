@@ -26,3 +26,5 @@ execute as @e[type=armor_stand,tag=paradox_portal] at @s run particle minecraft:
 execute if entity @e[tag=eon] run bossbar set minecraft:eon players @a
 execute store result bossbar minecraft:eon value run data get entity @e[tag=eon,limit=1] Health
 execute unless entity @e[tag=eon,limit=1] run bossbar set minecraft:eon players test
+
+execute as @e[type=armor_stand,tag=eon_portal] at @s run tp @s ~ ~ ~ ~10 ~
