@@ -6,7 +6,7 @@
   "allow_bar_shrinking": false,
   "secondary_color": "#332e27",
   "ability_bar_texture": "alienevo:textures/gui/ability_bar/interface.png",
-  "hidden": true,
+  "hidden": false,
   "abilities": {
 
     "hideBody": {
@@ -278,7 +278,7 @@
         },
         "start_time": {
             "type": "palladium:command",
-            "icon": "infinity:time_stone",
+            "icon": "minecraft:clock",
             "title": "Start Time",
             "bar_color": "lime",
             "hidden": true,
@@ -351,6 +351,61 @@
     "commands": [
         ""
     ]
-}
+},
+  "power_bast_mainhand": {
+            "type": "palladium:energy_beam",
+             "persistent_data": true,
+            "icon": "infinity:textures/icon/power_blast.png",
+            "title": "Power Blast",
+            "bar_color": "purple",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "energy_beam": "infinity:gauntlet_beam_mainhand",
+            "damage": 5,
+            "max_distance": 100,
+            "speed": 1,
+            "set_on_fire_seconds": 1,
+            "cause_fire": true,
+            "smelt_blocks": true,
+            "conditions": {
+               
+                "enabling": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "ability": "power_blast_aim_mainhand"
+                    }
+                   
+                ]
+               
+            }
+            
+        },
+        "power_blast_aim_mainhand": {
+            "type": "palladium:aim",
+            "icon": "timewalker:textures/icon/power_blast.png",
+            "title": "Power Blast",
+             "persistent_data": true,
+            "bar_color": "purple",
+            "hidden": true,
+            "hidden_in_bar": false,
+            "list_index": 1,
+            "gui_position": "null",
+            "description": "A powerful beam that deals a near infinite amount of damage. It has a range of 100 blocks, smelts blocks and causes fire",
+            "time": 1,
+            "arm": "main_arm",
+            "conditions": {
+                
+                "enabling": [
+                    {
+                        "type": "palladium:held",
+                        "cooldown": 0
+                    }
+                ]
+         
+            }
+        }
   }
 }
