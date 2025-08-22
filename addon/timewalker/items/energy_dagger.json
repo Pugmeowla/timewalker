@@ -2,5 +2,7 @@
     "type": "palladium:sword",
     "tier": "minecraft:diamond",
     "base_damage": 3,
-    "attack_speed": -2.4
+    "attack_speed": -2.4,
+        "register_item": true,
+    "creative_mode_tab": "timewalker:timewalker"
 }

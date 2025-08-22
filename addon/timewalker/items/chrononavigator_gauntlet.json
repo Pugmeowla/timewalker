@@ -2,5 +2,6 @@
     "max_stack_size": 1,
     "rarity": "epic",
     "is_fire_resistant": true,
-    "creative_mode_tab":"timewalker"
+    "register_item": true,
+    "creative_mode_tab": "timewalker:timewalker"
 }
