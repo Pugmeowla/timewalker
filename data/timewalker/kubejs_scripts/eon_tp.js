@@ -21,6 +21,7 @@ ServerEvents.commandRegistry(event => {
                                 server.runCommandSilent(`execute as ${username} at @s in ${dim} as @e[distance=..3] run tp @s ${x} ${y} ${z}`)
                                 server.runCommandSilent(`summon armor_stand ~ ~ ~ {Tags:["eon_portal"],NoGravity:1b,Marker:1b,Invisible:1b,ArmorItems:[{},{},{},{id:"timewalker:eon_portal",Count:1b}]}`)
                                 server.runCommandSilent(`schedule function timewalker:eon_tp_remove 2s`)
+                                server.runCommandSilent(`scoreboard players remove @s chrono_meter 50`)
                             }
             
                 return 1;
