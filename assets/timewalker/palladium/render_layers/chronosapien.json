@@ -14,7 +14,7 @@
           }
         }
   ],
-    "texture": "timewalker:textures/models/aliens/alien_122/chronosapien.png",
+    "texture": "timewalker:textures/models/aliens/alien_143/chronosapien.png",
     "bones": {
         "head": "Head",
         "body": "Body",

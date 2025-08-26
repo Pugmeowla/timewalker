@@ -1,6 +1,6 @@
 {
   "name": "chronian",
-  "icon": "minecraft:blaze_rod",
+  "icon": "alienevo:textures/gui/playlists/playlist_1/alien_123.png",
   "background": "alienevo:textures/gui/power_screen/power_screen.png",
   "primary_color": "#8ed721",
   "allow_bar_shrinking": false,
