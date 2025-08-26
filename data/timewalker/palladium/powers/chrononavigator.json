@@ -1,0 +1,40 @@
+{
+  "name": "Chrononavigator",
+  "icon": "minecraft:blaze_rod",
+  "background": "alienevo:textures/gui/power_screen/power_screen.png",
+  "primary_color": "#8ed721",
+  "allow_bar_shrinking": false,
+  "secondary_color": "#332e27",
+  "ability_bar_texture": "alienevo:textures/gui/ability_bar/interface.png",
+  "hidden": true,
+  "abilities": {
+"give_chronosapien":{
+    "type": "palladium:command",
+    "icon": "minecraft:command_block",
+    "title": "null",
+    "bar_color": "light_gray",
+    "hidden": true,
+    "hidden_in_bar": true,
+    "list_index": -1,
+    "gui_position": "null",
+    "description": "null",
+    "first_tick_commands": [
+      "execute as @a run scoreboard players set @s AlienEvo.Timer 5999",
+      "execute as @s run superpower add timewalker:chronosapien_scanned @s"
+    ],
+    "last_tick_commands": [],
+    "commands": [
+        ""
+    ],
+    "conditions":{
+      "unlocking":[
+{
+    "type": "palladium:has_power",
+    "power": "alienevo:prototype_omnitrix"
+}
+      ]
+    }
+}
+
+  }
+}

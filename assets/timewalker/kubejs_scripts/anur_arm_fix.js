@@ -7,9 +7,12 @@ PalladiumEvents.registerAnimations((event) => {
         let activation2 = animationUtil.getAnimationTimerAbilityValue(
             builder.getPlayer(), 'timewalker:eon_scanned2', 'rollcredits', builder.getPartialTicks()
         );
+         let activation3 = animationUtil.getAnimationTimerAbilityValue(
+            builder.getPlayer(), 'timewalker:chronosapien_scanned', 'rollcredits', builder.getPartialTicks()
+        );
 
         // pick whichever is active (largest > 0)
-        let activation = Math.max(activation1, activation2);
+        let activation = Math.max(activation1, activation2, activation3);
 
         if (activation > 0 && !builder.isFirstPerson()) {
             builder.get('right_arm')

@@ -3,27 +3,32 @@
   "layers": [
   {
     "type": "geckolib:default",
-    "model": "timewalker:geo/chronian.geo.json",
-    "texture": "timewalker:textures/models/aliens/alien_121/chronian.png",
+    "model": "timewalker:geo/chronosapien.geo.json",
+    "animation_file": "timewalker:animations/chronosapien.animation.json",
+    "animation_controller": [
+    {
+          "name": "spin",
+          "transition_tick_time": 0,
+          "triggers": {
+            "spin": "animation.timewalker.clockwork"
+          }
+        }
+  ],
+    "texture": "timewalker:textures/models/aliens/alien_122/chronosapien.png",
     "bones": {
         "head": "Head",
         "body": "Body",
-        "right_arm": "rightArm",
-        "left_arm": "leftArm",
-        "right_leg": "rightLeg",
-        "left_leg": "leftLeg"
+        "right_arm": "RightArm",
+        "left_arm": "LeftArm",
+        "right_leg": "Rightleg",
+        "left_leg": "LeftLeg"
 
-    }},
-       {
+    }
+  },
+    {
       "type": "geckolib:default",
       "model": {
-        "base": "timewalker:geo/badge.geo.json",
-        "variables": {
-          "BADGE": {
-            "type": "palladium:string_property",
-            "property": "badge"
-          }
-        }
+        "base": "timewalker:geo/chronosapien_badge.geo.json"
       },
       "texture": {
         "base": "alienevo:textures/models/badge/badge_#BADGE.png",
@@ -72,14 +77,8 @@
     {
       "type": "geckolib:default",
       "render_type": "glow",
-      "model": {
-        "base": "timewalker:geo/badge.geo.json",
-        "variables": {
-          "BADGE": {
-            "type": "palladium:string_property",
-            "property": "badge"
-          }
-        }
+       "model": {
+        "base": "timewalker:geo/chronosapien_badge.geo.json"
       },
       "texture": {
         "variables": {
@@ -99,13 +98,7 @@
       "type": "geckolib:default",
       "render_type": "glow",
       "model": {
-        "base": "timewalker:geo/badge.geo.json",
-        "variables": {
-          "BADGE": {
-            "type": "palladium:string_property",
-            "property": "badge"
-          }
-        }
+        "base": "timewalker:geo/chronosapien_badge.geo.json"
       },
       "texture": {
         "variables": {

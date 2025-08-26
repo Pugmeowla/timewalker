@@ -1,0 +1,36 @@
+{
+  "display": {
+    "title": {
+      "text": "I’ve gotten used to being lost in time.",
+      "color": "aqua"
+    },
+    "description": {
+      "text": "Obtain the Chrononavigator (Don’t worry if the advancement is blank after getting it, this is done so you can re-unlock the Chronosapien DNA sample)"
+    },
+    "icon": {
+      "item": "minecraft:clock"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "timewalker:root",
+  "criteria": {
+    "get_chrononavigator": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "timewalker:chrononavigator_watch"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "timewalker:unlock_chronosapien"
+  }
+}

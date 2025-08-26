@@ -2,6 +2,9 @@
     "objectives": [
         "chronian.XP",
         "chronian.Level",
-        "chronian.SkillPoint"
+        "chronian.SkillPoint",
+        "chronosapien.XP",
+        "chronosapien.Level",
+        "chronosapien.SkillPoint"
     ]
 }

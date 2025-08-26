@@ -1,0 +1,7 @@
+{
+  "slot": "mainhand",
+  "item": "timewalker:chrononavigator_gauntlet",
+ "power": [
+    "timewalker:chrononavigator"
+  ]
+}
