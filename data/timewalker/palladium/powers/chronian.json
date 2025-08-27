@@ -58,7 +58,7 @@
     },
     "teleport": {
             "type": "palladium:command",
-            "icon": "minecraft:clock",
+            "icon": "timewalker:textures/icon/chronian_tp.png",
             "title": "Teleport",
             "bar_color": "purple",
              "persistent_data": true,
@@ -104,7 +104,7 @@
     },
     "teleport_command": {
            "type": "palladium:dummy",
-            "icon": "minecraft:clock",
+            "icon": "timewalker:textures/icon/chronian_tp.png",
             "title": "Teleport Command",
             "bar_color": "light_blue",
              "persistent_data": true,
@@ -168,7 +168,7 @@
     },
      "teleport_command2": {
            "type": "palladium:dummy",
-            "icon": "minecraft:clock",
+            "icon": "timewalker:textures/icon/chronian_tp.png",
             "title": "Teleport Command",
             "bar_color": "light_blue",
              "persistent_data": true,
@@ -397,7 +397,7 @@
   "power_bast_mainhand": {
             "type": "palladium:energy_beam",
              "persistent_data": true,
-            "icon": "infinity:textures/icon/power_blast.png",
+            "icon": "timewalker:textures/icon/chronian_beam.png",
             "title": "Power Blast",
             "bar_color": "purple",
             "hidden": true,
@@ -405,7 +405,7 @@
             "list_index": -1,
             "gui_position": "null",
             "description": "null",
-            "energy_beam": "infinity:gauntlet_beam_mainhand",
+            "energy_beam": "timewalker:chronian_beam",
             "damage": 5,
             "max_distance": 100,
             "speed": 1,
@@ -427,7 +427,7 @@
         },
         "power_blast_aim_mainhand": {
             "type": "palladium:aim",
-            "icon": "timewalker:textures/icon/power_blast.png",
+            "icon": "timewalker:textures/icon/chronian_beam.png",
             "title": "Power Blast",
              "persistent_data": true,
             "bar_color": "purple",
@@ -451,7 +451,7 @@
         },
   "power_blast_energy": {
             "type": "palladium:command",
-            "icon": "minecraft:clock",
+            "icon": "timewalker:textures/icon/chronian_beam.png",
             "title": "Teleport",
             "bar_color": "purple",
              "persistent_data": true,
@@ -474,7 +474,7 @@
     },        
           "grab_entity": {
             "type": "palladium:command",
-            "icon": "infinity:space_stone",
+            "icon": "timewalker:textures/icon/chronian_grab.png",
             "title": "Telekinesis",
             "bar_color": "light_blue",
              "persistent_data": true,

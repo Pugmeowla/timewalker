@@ -1,0 +1,19 @@
+{
+    "type": "palladium:compound",
+  "layers": [
+  {
+    "type": "geckolib:default",
+    "model": "timewalker:geo/chronian.geo.json",
+    "texture": "timewalker:textures/models/aliens/alien_123/chronian.png",
+    "bones": {
+        "head": "Head",
+        "body": "Body",
+        "right_arm": "rightArm",
+        "left_arm": "leftArm",
+        "right_leg": "rightLeg",
+        "left_leg": "leftLeg"
+
+    }
+  }
+  ]
+}

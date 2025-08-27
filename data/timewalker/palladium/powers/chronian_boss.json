@@ -44,7 +44,7 @@
     "renderLayer": {
       "type": "palladium:render_layer",
       "hidden": true,
-      "render_layer": "timewalker:chronian"
+      "render_layer": "timewalker:chronian_permanent"
     },
      "bubble": {
       "type": "palladium:command",
