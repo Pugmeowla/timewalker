@@ -171,7 +171,7 @@
           }
         }
       ],
-      "texture": "alienevo:textures/models/sil/alien_122.png",
+      "texture": "alienevo:textures/models/sil/alien_143.png",
       "conditions": [
         {
           "type": "palladium:objective_score",

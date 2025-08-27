@@ -6,8 +6,9 @@
   "allow_bar_shrinking": false,
   "secondary_color": "#332e27",
   "ability_bar_texture": "alienevo:textures/gui/ability_bar/interface.png",
-  "hidden": true,
+  "hidden": false,
   "abilities": {
+
 "give_chronosapien":{
     "type": "palladium:command",
     "icon": "minecraft:command_block",
@@ -27,6 +28,15 @@
         ""
     ],
     "conditions":{
+      "enabling":[
+        {
+    "type": "palladium:action",
+    "cooldown": 0,
+    "key_type": "right_click",
+    "needs_empty_hand": false,
+    "allow_scrolling_when_crouching": true
+}
+      ],
       "unlocking":[
 {
     "type": "palladium:has_power",
