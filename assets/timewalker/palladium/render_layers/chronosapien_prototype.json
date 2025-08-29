@@ -14,7 +14,7 @@
           }
         }
   ],
-    "texture": "timewalker:textures/models/aliens/alien_143/chronosapien.png",
+    "texture": "timewalker:textures/models/aliens/alien_143/chronosapien_prototype.png",
     "bones": {
         "head": "Head",
         "body": "Body",
@@ -29,7 +29,7 @@
     "type": "geckolib:default",
     "model": "timewalker:geo/chronosapien.geo.json",
      "render_type": "glow",
-    "texture": "timewalker:textures/models/aliens/alien_143/chronosapien_glow.png",
+    "texture": "timewalker:textures/models/aliens/alien_143/chronosapien_prototype_glow.png",
     "bones": {
         "head": "Head",
         "body": "Body",

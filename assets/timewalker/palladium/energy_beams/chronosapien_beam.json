@@ -1,11 +1,12 @@
 [
   {
     "body_part": "head",
-    "glow_color": "#ffffe8",
-    "core_color": "#d4ff17",
+    "glow_color": "#FFFFE8",
+    "core_color": "#D4FF17",
     "size": 8,
     "bloom": 1,
-    "core_opacity": 0.75,
+    "glow_opacity": 0.5,
+    "core_opacity": 0.5,
     "offset": [0,-5,0],
     "rotation": 3,
     "rotation_speed": 10,
