@@ -1,8 +1,8 @@
 [
   {
     "body_part": "head",
-    "glow_color": "#FFFFE8",
-    "core_color": "#D4FF17",
+    "glow_color": "#C0FF00",
+    "core_color": "#C0FF00",
     "size": 8,
     "bloom": 1,
     "glow_opacity": 0.5,

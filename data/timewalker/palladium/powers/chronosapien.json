@@ -7,6 +7,13 @@
   "secondary_color": "#332e27",
   "ability_bar_texture": "alienevo:textures/gui/ability_bar/interface.png",
   "hidden": false,
+   "energy_bars": {
+   "chronosapien_meter": {
+       "max": 500,
+       "auto_increase_per_tick": 1,
+       "color": "#C0FF00"
+   }
+},
   "abilities": {
 
     "hideBody": {
@@ -58,7 +65,7 @@
       "icon": "minecraft:textures/item/iron_sword.png",
       "hidden": true,
       "uuid": "01d54cb1-6b09-41a7-92e2-83e076426a30",
-      "amount": -0.06,
+      "amount": -0.02,
       "conditions": {
         "enabling": [
           {
@@ -177,6 +184,10 @@
             "amount": 0.5,
             "operation": 0,
             "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "energy_bar_usage": {
+   "energy_bar": "chronosapien_meter",
+   "amount": 3
+},
             "conditions": {
               "enabling":[
                 {
@@ -186,7 +197,13 @@
     "needs_empty_hand": false,
     "allow_scrolling_when_crouching": true
 }
-              ]
+              ],
+                "unlocking": {
+      "type": "palladium:energy_bar",
+      "energy_bar": "chronosapien_meter",
+      "min": 3
+   
+}
             }
         },
           "step_assist":{
