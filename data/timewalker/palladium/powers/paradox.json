@@ -3,7 +3,7 @@
     "background": "minecraft:textures/block/sculk.png",
     "icon": "minecraft:clock",
     "gui_display_type": "tree",
-    "persistent_data": true,
+    "persistent_data": false,
     "abilities": {
 
          "teleport": {
@@ -246,6 +246,33 @@
     "amount": 0.0001,
     "operation": 0,
     "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1"
+},
+ "remove_if_omnitrix":{
+    "type": "palladium:command",
+    "icon": "alienevo:textures/gui/detransform/detransform_prototype_red.png",
+    "title": "null",
+    "bar_color": "red",
+    "hidden": false,
+    "hidden_in_bar": false,
+    "list_index": 0,
+    "gui_position": "null",
+    "description": "null",
+    "first_tick_commands": [
+        "superpower remove timewalker:paradox @s",
+        "function timewalker:remove_paradox"
+    ],
+    "last_tick_commands": ["effect clear @s minecraft:water_breathing","effect clear @s minecraft:saturation","effect clear @s minecraft:strength"],
+    "commands": [
+        ""
+    ],
+    "conditions":{
+        "enabling":[
+            {
+    "type": "palladium:has_power",
+    "power": "alienevo:prototype_omnitrix"
+}
+        ]
+    }
 }
     }
 }

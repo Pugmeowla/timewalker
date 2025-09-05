@@ -1,0 +1,1 @@
+tellraw @p {"text":"Genetic variation detected: Repairng host DNA ","color":"green"}
