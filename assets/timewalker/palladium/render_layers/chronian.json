@@ -26,47 +26,9 @@
         }
       },
       "texture": {
-        "base": "alienevo:textures/models/badge/badge_#BADGE.png",
-        "transformers": [
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/badge/#BADGE/core_side/core_side_#Z.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/badge/#BADGE/core_top/core_top_#Y.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/badge/#BADGE/dial_inner/dial_inner_#X.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/badge/#BADGE/dial_outer/dial_outer_#W.png"
-          }
-        ],
-        "variables": {
-          "BADGE": {
-            "type": "palladium:string_property",
-            "property": "badge"
-          },
-          "Z": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.CoreSide"
-          },
-          "Y": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.CoreTop"
-          },
-          "X": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.DialInner"
-          },
-          "W": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.DialOuter"
-          }
-        }
+        "base": "alienevo:textures/models/badge/badge_prototype.png"
+       
+       
       }
     },
     {
@@ -92,7 +54,7 @@
             "property": "AlienEvo.Color"
           }
         },
-        "base": "alienevo:textures/models/badge/badge_#X_#BADGE.png"
+        "base": "alienevo:textures/models/badge/badge_glow_default_prototype.png"
       }
     },
     {
@@ -114,7 +76,7 @@
             "property": "badge"
           }
         },
-        "base": "alienevo:textures/models/badge/badge_red_#BADGE.png"
+        "base": "alienevo:textures/models/badge/badge_glow_timeout_prototype.png"
       },
       "conditions": [
         {

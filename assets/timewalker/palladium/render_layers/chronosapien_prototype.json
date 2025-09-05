@@ -3,18 +3,16 @@
   "layers": [
   {
     "type": "geckolib:default",
-    "model": "timewalker:geo/chronosapien.geo.json",
-    "animation_file": "timewalker:animations/chronosapien.animation.json",
-    "animation_controller": [
-    {
-          "name": "spin",
-          "transition_tick_time": 0,
-          "triggers": {
-            "spin": "animation.timewalker.clockwork"
-          }
-        }
-  ],
-    "texture": "timewalker:textures/models/aliens/alien_143/chronosapien_prototype.png",
+          "model": {
+        "base": "timewalker:geo/chronosapien.geo.json"
+      },
+    "texture":{
+      "base": "timewalker:textures/models/aliens/alien_143/chronosapien_prototype.png"
+      
+    },
+    
+    
+
     "bones": {
         "head": "Head",
         "body": "Body",
@@ -46,47 +44,7 @@
         "base": "timewalker:geo/chronosapien_badge.geo.json"
       },
       "texture": {
-        "base": "alienevo:textures/models/badge/badge_#BADGE.png",
-        "transformers": [
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/badge/#BADGE/core_side/core_side_#Z.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/badge/#BADGE/core_top/core_top_#Y.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/badge/#BADGE/dial_inner/dial_inner_#X.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/badge/#BADGE/dial_outer/dial_outer_#W.png"
-          }
-        ],
-        "variables": {
-          "BADGE": {
-            "type": "palladium:string_property",
-            "property": "badge"
-          },
-          "Z": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.CoreSide"
-          },
-          "Y": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.CoreTop"
-          },
-          "X": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.DialInner"
-          },
-          "W": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.DialOuter"
-          }
-        }
+        "base": "alienevo:textures/models/badge/badge_prototype.png"
       }
     },
     {
@@ -96,17 +54,7 @@
         "base": "timewalker:geo/chronosapien_badge.geo.json"
       },
       "texture": {
-        "variables": {
-          "BADGE": {
-            "type": "palladium:string_property",
-            "property": "badge"
-          },
-          "X": {
-            "type": "palladium:string_property",
-            "property": "AlienEvo.Color"
-          }
-        },
-        "base": "alienevo:textures/models/badge/badge_#X_#BADGE.png"
+        "base": "alienevo:textures/models/badge/badge_glow_default_prototype.png"
       }
     },
     {
@@ -122,7 +70,7 @@
             "property": "badge"
           }
         },
-        "base": "alienevo:textures/models/badge/badge_red_#BADGE.png"
+        "base": "alienevo:textures/models/badge/badge_glow_timeout_prototype.png"
       },
       "conditions": [
         {
