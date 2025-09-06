@@ -1,10 +1,9 @@
 PalladiumEvents.registerAnimations((event) => {
     event.register('alienevo/fakeactivations', 200, (builder) => {
         // check both abilities
-        let activation1 = animationUtil.getAnimationTimerAbilityValue(
+         let activation1 = animationUtil.getAnimationTimerAbilityValue(
             builder.getPlayer(), 'anur:furryscanned', 'rollcredits', builder.getPartialTicks()
-        );
-        let activation2 = animationUtil.getAnimationTimerAbilityValue(
+        ); let activation2 = animationUtil.getAnimationTimerAbilityValue(
             builder.getPlayer(), 'timewalker:eon_scanned2', 'rollcredits', builder.getPartialTicks()
         );
          let activation3 = animationUtil.getAnimationTimerAbilityValue(

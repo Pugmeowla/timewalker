@@ -4,6 +4,216 @@
     {
       "type": "geckolib:default",
       "model": {
+        "normal": "alienevo:geo/10k/10k_omnitrix.geo.json",
+        "slim": "alienevo:geo/10k/10k_omnitrix_slim.geo.json"
+      },
+      "animation_file": "alienevo:animations/omnitrix.animation.json",
+      "animation_controller": [
+        {
+          "name": "spin",
+          "transition_tick_time": 0,
+          "triggers": {
+            "scan_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.scan"
+              }
+            ],
+            "scan2_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.scan2"
+              }
+            ],
+            "spinl_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.spinleft"
+              }
+            ],
+            "spinr_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.spinright"
+              }
+            ],
+            "open_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.open"
+              }
+            ],
+            "close_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.close"
+              }
+            ],
+            "settings_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.settings_open"
+              }
+            ],
+            "settings_trigger_close": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.settings_close"
+              }
+            ],
+            "settings_trigger_right": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.settings_spinright"
+              }
+            ],
+            "settings_trigger_left": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.settings_spinleft"
+              }
+            ],
+            "playlist_swap": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.playlistchange"
+              }
+            ],
+            "code_right": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.alt_spinright"
+              }
+            ],
+            "code_left": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.alt_spinleft"
+              }
+            ],
+            "master_control": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.unlock_master"
+              }
+            ]
+          }
+        }
+      ],
+      "texture": {
+        "base": "alienevo:textures/models/prototype_omnitrix/prototype.png",
+        "transformers": [
+          {
+            "type": "palladium:overlay",
+            "overlay": "alienevo:textures/models/prototype_omnitrix/base_primary/base_primary_#A.png"
+          },
+          {
+            "type": "palladium:overlay",
+            "overlay": "alienevo:textures/models/prototype_omnitrix/base_secondary/base_secondary_#B.png"
+          },
+          {
+            "type": "palladium:overlay",
+            "overlay": "alienevo:textures/models/prototype_omnitrix/base_tertiary/base_tertiary_#C.png"
+          },
+          {
+            "type": "palladium:overlay",
+            "overlay": "alienevo:textures/models/prototype_omnitrix/buttons/buttons_#D.png"
+          },
+          {
+            "type": "palladium:overlay",
+            "overlay": "alienevo:textures/models/prototype_omnitrix/core_side/core_side_#E.png"
+          },
+          {
+            "type": "palladium:overlay",
+            "overlay": "alienevo:textures/models/prototype_omnitrix/core_top/core_top_#F.png"
+          },
+          {
+            "type": "palladium:overlay",
+            "overlay": "alienevo:textures/models/prototype_omnitrix/dial_inner/dial_inner_#G.png"
+          },
+          {
+            "type": "palladium:overlay",
+            "overlay": "alienevo:textures/models/prototype_omnitrix/dial_outer/dial_outer_#H.png"
+          },
+          {
+            "type": "palladium:overlay",
+            "overlay": "alienevo:textures/models/prototype_omnitrix/tubes/tubes_#I.png"
+          },
+          {
+            "type": "palladium:alpha_mask",
+            "mask": "alienevo:textures/models/alpha_masks/prototype/prototype_core_#J.png"
+          },
+          {
+            "type": "palladium:alpha_mask",
+            "mask": "alienevo:textures/models/alpha_masks/prototype/prototype_stage_#K.png"
+          }
+        ],
+        "variables": {
+          "A": {
+            "type": "palladium:objective_score",
+            "objective": "AlienEvo.BasePrimary"
+          },
+          "B": {
+            "type": "palladium:objective_score",
+            "objective": "AlienEvo.BaseSecondary"
+          },
+          "C": {
+            "type": "palladium:objective_score",
+            "objective": "AlienEvo.BaseTertiary"
+          },
+          "D": {
+            "type": "palladium:objective_score",
+            "objective": "AlienEvo.Buttons"
+          },
+          "E": {
+            "type": "palladium:objective_score",
+            "objective": "AlienEvo.CoreSide"
+          },
+          "F": {
+            "type": "palladium:objective_score",
+            "objective": "AlienEvo.CoreTop"
+          },
+          "G": {
+            "type": "palladium:objective_score",
+            "objective": "AlienEvo.DialInner"
+          },
+          "H": {
+            "type": "palladium:objective_score",
+            "objective": "AlienEvo.DialOuter"
+          },
+          "I": {
+            "type": "palladium:objective_score",
+            "objective": "AlienEvo.Tubes"
+          },
+          "J": {
+            "type": "palladium:objective_score",
+            "objective": "AlienEvo.NoCore"
+          },
+          "K": {
+            "type": "palladium:objective_score",
+            "objective": "AlienEvo.10kStage"
+          }
+        },
+        "output": "alienevo:textures/models/prototype_omnitrix/parts_#A_#B_#C_#D_#E_#F_#G_#H_#I_#J_#K.png"
+      },
+      "conditions": [
+        {
+          "type": "palladium:objective_score",
+          "objective": "AlienEvo.10kPhase",
+          "min_score": 1,
+          "max_score": 1
+        },
+        {
+          "type": "palladium:objective_score",
+          "objective": "Furry_Form",
+          "min_score": 1,
+          "max_score": 1
+        }
+      ]
+    },
+    {
+      "type": "geckolib:default",
+      "model": {
         "normal": "alienevo:geo/prototype_omnitrix.geo.json",
         "slim": "alienevo:geo/prototype_omnitrix_slim.geo.json"
       },
@@ -140,10 +350,6 @@
             "overlay": "alienevo:textures/models/prototype_omnitrix/tubes/tubes_#I.png"
           },
           {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/glow/prototype/glow_#X.png"
-          },
-          {
             "type": "palladium:alpha_mask",
             "mask": "alienevo:textures/models/alpha_masks/prototype/prototype_core_#J.png"
           }
@@ -188,13 +394,9 @@
           "J": {
             "type": "palladium:objective_score",
             "objective": "AlienEvo.NoCore"
-          },
-          "X": {
-            "type": "palladium:string_property",
-            "property": "AlienEvo.Color"
           }
         },
-        "output": "alienevo:textures/models/prototype_omnitrix/parts_#A_#B_#C_#D_#E_#F_#G_#H_#I_#J_#X.png"
+        "output": "alienevo:textures/models/prototype_omnitrix/parts_#A_#B_#C_#D_#E_#F_#G_#H_#I_#J.png"
       },
       "conditions": [
         {
@@ -218,6 +420,523 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "type": "geckolib:default",
+      "model": {
+        "normal": "alienevo:geo/prototype_omnitrix.geo.json",
+        "slim": "alienevo:geo/prototype_omnitrix_slim.geo.json"
+      },
+      "animation_file": "alienevo:animations/omnitrix.animation.json",
+      "animation_controller": [
+        {
+          "name": "spin",
+          "transition_tick_time": 0,
+          "triggers": {
+            "scan_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.scan"
+              }
+            ],
+            "scan2_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.scan2"
+              }
+            ],
+            "spinl_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.spinleft"
+              }
+            ],
+            "spinr_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.spinright"
+              }
+            ],
+            "open_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.open"
+              }
+            ],
+            "close_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.close"
+              }
+            ],
+            "settings_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.settings_open"
+              }
+            ],
+            "settings_trigger_close": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.settings_close"
+              }
+            ],
+            "settings_trigger_right": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.settings_spinright"
+              }
+            ],
+            "code_right": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.alt_spinright"
+              }
+            ],
+            "code_left": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.alt_spinleft"
+              }
+            ],
+            "settings_trigger_left": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.settings_spinleft"
+              }
+            ],
+            "playlist_swap": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.playlistchange"
+              }
+            ],
+            "master_control": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.unlock_master"
+              }
+            ]
+          }
+        }
+      ],
+      "texture": {
+        "base": "alienevo:textures/models/prototype_omnitrix/prototype_glow_#WATCHSTATE.png",
+        "transformers": [
+          {
+            "type": "palladium:alpha_mask",
+            "mask": "alienevo:textures/models/alpha_masks/prototype/prototype_core_#J.png"
+          },
+          {
+            "type": "palladium:overlay",
+            "overlay": "alienevo:textures/models/prototype_omnitrix/prototype_inverted_#H.png"
+          },
+          {
+            "type": "palladium:color",
+            "color": "##GLOW_1",
+            "filter": "#b3ff40",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##GLOW_2",
+            "filter": "#a7f72e",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##GLOW_3",
+            "filter": "#8ed721",
+            "ignore_blank": true
+          }
+        ],
+        "variables": {
+          "WATCHSTATE": {
+            "type": "palladium:string_property",
+            "property": "watch_state"
+          },
+          "J": {
+            "type": "palladium:objective_score",
+            "objective": "AlienEvo.NoCore"
+          },
+          "H": {
+            "type": "palladium:objective_score",
+            "objective": "AlienEvo.Invert"
+          },
+          "GLOW_1": {
+            "type": "palladium:string_property",
+            "property": "prototype_glow_color_1"
+          },
+          "GLOW_2": {
+            "type": "palladium:string_property",
+            "property": "prototype_glow_color_2"
+          },
+          "GLOW_3": {
+            "type": "palladium:string_property",
+            "property": "prototype_glow_color_3"
+          }
+        }
+      },
+      "conditions": [
+        {
+          "type": "palladium:objective_score",
+          "objective": "AlienEvo.10kPhase",
+          "min_score": 0,
+          "max_score": 0
+        },
+        {
+          "type": "palladium:objective_score",
+          "objective": "Furry_Form",
+          "min_score": 1,
+          "max_score": 1
+        }
+      ]
+    },
+    {
+      "type": "geckolib:default",
+      "model": {
+        "normal": "alienevo:geo/10k/10k_omnitrix.geo.json",
+        "slim": "alienevo:geo/10k/10k_omnitrix_slim.geo.json"
+      },
+      "animation_file": "alienevo:animations/omnitrix.animation.json",
+      "animation_controller": [
+        {
+          "name": "spin",
+          "transition_tick_time": 0,
+          "triggers": {
+            "scan_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.scan"
+              }
+            ],
+            "scan2_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.scan2"
+              }
+            ],
+            "spinl_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.spinleft"
+              }
+            ],
+            "spinr_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.spinright"
+              }
+            ],
+            "open_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.open"
+              }
+            ],
+            "close_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.close"
+              }
+            ],
+            "settings_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.settings_open"
+              }
+            ],
+            "settings_trigger_close": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.settings_close"
+              }
+            ],
+            "settings_trigger_right": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.settings_spinright"
+              }
+            ],
+            "code_right": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.alt_spinright"
+              }
+            ],
+            "code_left": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.alt_spinleft"
+              }
+            ],
+            "settings_trigger_left": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.settings_spinleft"
+              }
+            ],
+            "playlist_swap": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.playlistchange"
+              }
+            ],
+            "master_control": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.unlock_master"
+              }
+            ]
+          }
+        }
+      ],
+      "texture": {
+        "base": "alienevo:textures/models/prototype_omnitrix/prototype_glow_#WATCHSTATE.png",
+        "transformers": [
+          {
+            "type": "palladium:color",
+            "color": "##GLOW_1",
+            "filter": "#b3ff40",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##GLOW_2",
+            "filter": "#a7f72e",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##GLOW_3",
+            "filter": "#8ed721",
+            "ignore_blank": true
+          }
+        ],
+        "variables": {
+          "WATCHSTATE": {
+            "type": "palladium:string_property",
+            "property": "watch_state"
+          },
+          "GLOW_1": {
+            "type": "palladium:string_property",
+            "property": "prototype_glow_color_1"
+          },
+          "GLOW_2": {
+            "type": "palladium:string_property",
+            "property": "prototype_glow_color_2"
+          },
+          "GLOW_3": {
+            "type": "palladium:string_property",
+            "property": "prototype_glow_color_3"
+          }
+        }
+      },
+      "conditions": [
+        {
+          "type": "palladium:objective_score",
+          "objective": "AlienEvo.10kPhase",
+          "min_score": 1,
+          "max_score": 1
+        },
+        {
+          "type": "palladium:objective_score",
+          "objective": "Furry_Form",
+          "min_score": 1,
+          "max_score": 1
+        }
+      ]
+    },
+    {
+      "type": "geckolib:default",
+      "model": "anur:geo/10k_omnitrix_phase2.geo.json",
+      "animation_file": "alienevo:animations/omnitrix.animation.json",
+      "animation_controller": [
+        {
+          "name": "spin",
+          "transition_tick_time": 0,
+          "triggers": {
+            "scan_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.scan"
+              }
+            ],
+            "scan2_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.scan2"
+              }
+            ],
+            "spinl_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.spinleft"
+              }
+            ],
+            "spinr_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.spinright"
+              }
+            ],
+            "open_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.open"
+              }
+            ],
+            "close_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.close"
+              }
+            ],
+            "settings_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.settings_open"
+              }
+            ],
+            "settings_trigger_close": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.settings_close"
+              }
+            ],
+            "settings_trigger_right": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.settings_spinright"
+              }
+            ],
+            "code_right": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.alt_spinright"
+              }
+            ],
+            "code_left": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.alt_spinleft"
+              }
+            ],
+            "settings_trigger_left": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.settings_spinleft"
+              }
+            ],
+            "playlist_swap": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.playlistchange"
+              }
+            ],
+            "master_control": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.unlock_master"
+              }
+            ]
+          }
+        }
+      ],
+      "texture": {
+        "base": "alienevo:textures/models/prototype_omnitrix/prototype.png",
+        "transformers": [
+          {
+            "type": "palladium:overlay",
+            "overlay": "alienevo:textures/models/prototype_omnitrix/base_primary/base_primary_#A.png"
+          },
+          {
+            "type": "palladium:overlay",
+            "overlay": "alienevo:textures/models/prototype_omnitrix/base_secondary/base_secondary_#B.png"
+          },
+          {
+            "type": "palladium:overlay",
+            "overlay": "alienevo:textures/models/prototype_omnitrix/base_tertiary/base_tertiary_#C.png"
+          },
+          {
+            "type": "palladium:overlay",
+            "overlay": "alienevo:textures/models/prototype_omnitrix/buttons/buttons_#D.png"
+          },
+          {
+            "type": "palladium:overlay",
+            "overlay": "alienevo:textures/models/prototype_omnitrix/core_side/core_side_#E.png"
+          },
+          {
+            "type": "palladium:overlay",
+            "overlay": "alienevo:textures/models/prototype_omnitrix/core_top/core_top_#F.png"
+          },
+          {
+            "type": "palladium:overlay",
+            "overlay": "alienevo:textures/models/prototype_omnitrix/dial_inner/dial_inner_#G.png"
+          },
+          {
+            "type": "palladium:overlay",
+            "overlay": "alienevo:textures/models/prototype_omnitrix/dial_outer/dial_outer_#H.png"
+          },
+          {
+            "type": "palladium:overlay",
+            "overlay": "alienevo:textures/models/prototype_omnitrix/tubes/tubes_#I.png"
+          }
+        ],
+        "variables": {
+          "A": {
+            "type": "palladium:objective_score",
+            "objective": "AlienEvo.BasePrimary"
+          },
+          "B": {
+            "type": "palladium:objective_score",
+            "objective": "AlienEvo.BaseSecondary"
+          },
+          "C": {
+            "type": "palladium:objective_score",
+            "objective": "AlienEvo.BaseTertiary"
+          },
+          "D": {
+            "type": "palladium:objective_score",
+            "objective": "AlienEvo.Buttons"
+          },
+          "E": {
+            "type": "palladium:objective_score",
+            "objective": "AlienEvo.CoreSide"
+          },
+          "F": {
+            "type": "palladium:objective_score",
+            "objective": "AlienEvo.CoreTop"
+          },
+          "G": {
+            "type": "palladium:objective_score",
+            "objective": "AlienEvo.DialInner"
+          },
+          "H": {
+            "type": "palladium:objective_score",
+            "objective": "AlienEvo.DialOuter"
+          },
+          "I": {
+            "type": "palladium:objective_score",
+            "objective": "AlienEvo.Tubes"
+          }
+        },
+        "output": "alienevo:textures/models/prototype_omnitrix/parts_#A_#B_#C_#D_#E_#F_#G_#H_#I.png"
+      },
+      "conditions": [
+        {
+          "type": "palladium:objective_score",
+          "objective": "Furry_Form",
+          "min_score": 2,
+          "max_score": 2
+        },
+        {
+          "type": "palladium:objective_score",
+          "objective": "AlienEvo.10kPhase",
+          "min_score": 1,
+          "max_score": 1
         }
       ]
     },
@@ -357,15 +1076,41 @@
             "overlay": "alienevo:textures/models/prototype_omnitrix/tubes/tubes_#I.png"
           },
           {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/glow/prototype/glow_#X.png"
-          },
-          {
             "type": "palladium:alpha_mask",
             "mask": "alienevo:textures/models/alpha_masks/prototype/prototype_core_#J.png"
+          },
+          {
+            "type": "palladium:color",
+            "color": "##GLOW_1",
+            "filter": "#b3ff40",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##GLOW_2",
+            "filter": "#a7f72e",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##GLOW_3",
+            "filter": "#8ed721",
+            "ignore_blank": true
           }
         ],
         "variables": {
+          "GLOW_1": {
+            "type": "palladium:string_property",
+            "property": "prototype_glow_color_1"
+          },
+          "GLOW_2": {
+            "type": "palladium:string_property",
+            "property": "prototype_glow_color_2"
+          },
+          "GLOW_3": {
+            "type": "palladium:string_property",
+            "property": "prototype_glow_color_3"
+          },
           "A": {
             "type": "palladium:objective_score",
             "objective": "AlienEvo.BasePrimary"
@@ -405,13 +1150,9 @@
           "J": {
             "type": "palladium:objective_score",
             "objective": "AlienEvo.NoCore"
-          },
-          "X": {
-            "type": "palladium:string_property",
-            "property": "AlienEvo.Color"
           }
         },
-        "output": "alienevo:textures/models/prototype_omnitrix/parts_#A_#B_#C_#D_#E_#F_#G_#H_#I_#J_#X.png"
+        "output": "alienevo:textures/models/prototype_omnitrix/parts_#A_#B_#C_#D_#E_#F_#G_#H_#I_#J.png"
       },
       "conditions": [
         {
@@ -430,311 +1171,25 @@
     },
     {
       "type": "geckolib:default",
-      "model": "anur:geo/prototype_omnitrix_phase3.geo.json",
-      "animation_file": "anur:animations/loboan.animation.json",
-      "animation_controller": [
-        {
-          "name": "wolf",
-          "transition_tick_time": 0,
-          "animation": "animation.loboan.idle"
-        },
-        {
-          "name": "loboan_trigger",
-          "transition_tick_time": 0,
-          "triggers": {
-            "punch_right": "animation.loboan.rpunch",
-            "punch_left": "animation.loboan.lpunch",
-            "mouth_trigger": "animation.loboan.mouth",
-            "mouthnt_trigger": "animation.loboan.mouthnt",
-            "sprinting": "animation.loboan.sprint",
-            "sprintingnt": "animation.loboan.sprintnt",
-            "megahowl": "animation.loboan.megamouth"
-          }
-        },
-        {
-          "name": "mouth",
-          "transition_tick_time": 0,
-          "triggers": {
-            "bite": "animation.loboan.bite"
-          }
-        }
-      ],
-      "texture": {
-        "base": "alienevo:textures/models/prototype_omnitrix/prototype.png",
-        "transformers": [
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/base_primary/base_primary_#A.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/base_secondary/base_secondary_#B.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/base_tertiary/base_tertiary_#C.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/buttons/buttons_#D.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/core_side/core_side_#E.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/core_top/core_top_#F.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/dial_inner/dial_inner_#G.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/dial_outer/dial_outer_#H.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/tubes/tubes_#I.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/glow/prototype/glow_#X.png"
-          },
-          {
-            "type": "palladium:alpha_mask",
-            "mask": "alienevo:textures/models/alpha_masks/prototype/prototype_core_#J.png"
-          }
-        ],
-        "variables": {
-          "A": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.BasePrimary"
-          },
-          "B": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.BaseSecondary"
-          },
-          "C": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.BaseTertiary"
-          },
-          "D": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.Buttons"
-          },
-          "E": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.CoreSide"
-          },
-          "F": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.CoreTop"
-          },
-          "G": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.DialInner"
-          },
-          "H": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.DialOuter"
-          },
-          "I": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.Tubes"
-          },
-          "J": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.NoCore"
-          },
-          "X": {
-            "type": "palladium:string_property",
-            "property": "AlienEvo.Color"
-          }
-        },
-        "output": "alienevo:textures/models/prototype_omnitrix/parts_#A_#B_#C_#D_#E_#F_#G_#H_#I_#J_#X.png"
-      },
-      "conditions": [
-        {
-          "type": "palladium:objective_score",
-          "objective": "Furry_Form",
-          "min_score": 3,
-          "max_score": 3
-        },
-        {
-          "type": "palladium:not",
-          "conditions": [
-            {
-              "type": "palladium:or",
-              "conditions": [
-                {
-                  "type": "palladium:objective_score",
-                  "objective": "AlienEvo.10kPhase",
-                  "min_score": 1,
-                  "max_score": 1
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "geckolib:default",
-      "model": "anur:geo/10k_omnitrix_phase3.geo.json",
-      "animation_file": "anur:animations/loboan.animation.json",
-      "animation_controller": [
-        {
-          "name": "wolf",
-          "transition_tick_time": 0,
-          "animation": "animation.loboan.idle"
-        },
-        {
-          "name": "loboan_trigger",
-          "transition_tick_time": 0,
-          "triggers": {
-            "punch_right": "animation.loboan.rpunch",
-            "punch_left": "animation.loboan.lpunch",
-            "mouth_trigger": "animation.loboan.mouth",
-            "mouthnt_trigger": "animation.loboan.mouthnt",
-            "sprinting": "animation.loboan.sprint",
-            "sprintingnt": "animation.loboan.sprintnt",
-            "megahowl": "animation.loboan.megamouth"
-          }
-        },
-        {
-          "name": "mouth",
-          "transition_tick_time": 0,
-          "triggers": {
-            "bite": "animation.loboan.bite"
-          }
-        }
-      ],
-      "texture": {
-        "base": "alienevo:textures/models/prototype_omnitrix/prototype.png",
-        "transformers": [
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/base_primary/base_primary_#A.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/base_secondary/base_secondary_#B.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/base_tertiary/base_tertiary_#C.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/buttons/buttons_#D.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/core_side/core_side_#E.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/core_top/core_top_#F.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/dial_inner/dial_inner_#G.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/dial_outer/dial_outer_#H.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/tubes/tubes_#I.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/glow/prototype/glow_#X.png"
-          },
-          {
-            "type": "palladium:alpha_mask",
-            "mask": "alienevo:textures/models/alpha_masks/prototype/prototype_core_#J.png"
-          }
-        ],
-        "variables": {
-          "A": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.BasePrimary"
-          },
-          "B": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.BaseSecondary"
-          },
-          "C": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.BaseTertiary"
-          },
-          "D": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.Buttons"
-          },
-          "E": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.CoreSide"
-          },
-          "F": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.CoreTop"
-          },
-          "G": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.DialInner"
-          },
-          "H": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.DialOuter"
-          },
-          "I": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.Tubes"
-          },
-          "J": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.NoCore"
-          },
-          "X": {
-            "type": "palladium:string_property",
-            "property": "AlienEvo.Color"
-          }
-        },
-        "output": "alienevo:textures/models/prototype_omnitrix/parts_#A_#B_#C_#D_#E_#F_#G_#H_#I_#J_#X.png"
-      },
-      "conditions": [
-        {
-          "type": "palladium:objective_score",
-          "objective": "Furry_Form",
-          "min_score": 3,
-          "max_score": 3
-        },
-        {
-          "type": "palladium:objective_score",
-          "objective": "AlienEvo.10kPhase",
-          "min_score": 1,
-          "max_score": 1
-        }
-      ]
-    },
-    {
-      "type": "geckolib:default",
-      "model": {
-        "normal": "alienevo:geo/prototype_omnitrix.geo.json",
-        "slim": "alienevo:geo/prototype_omnitrix_slim.geo.json"
-      },
-      "render_type": "glow",
+      "model": "anur:geo/prototype_omnitrix_phase2.geo.json",
       "animation_file": "alienevo:animations/omnitrix.animation.json",
       "animation_controller": [
         {
           "name": "spin",
           "transition_tick_time": 0,
           "triggers": {
+            "scan_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.scan"
+              }
+            ],
+            "scan2_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.scan2"
+              }
+            ],
             "spinl_trigger": [
               {
                 "type": "then_play_and_hold",
@@ -777,12 +1232,6 @@
                 "animation": "animation.prototype.settings_spinright"
               }
             ],
-            "settings_trigger_left": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.settings_spinleft"
-              }
-            ],
             "code_right": [
               {
                 "type": "then_play_and_hold",
@@ -793,6 +1242,12 @@
               {
                 "type": "then_play_and_hold",
                 "animation": "animation.prototype.alt_spinleft"
+              }
+            ],
+            "settings_trigger_left": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.settings_spinleft"
               }
             ],
             "playlist_swap": [
@@ -811,7 +1266,7 @@
         }
       ],
       "texture": {
-        "base": "alienevo:textures/models/glow/prototype/glow_#X.png",
+        "base": "alienevo:textures/models/prototype_omnitrix/prototype_glow_#WATCHSTATE.png",
         "transformers": [
           {
             "type": "palladium:alpha_mask",
@@ -820,12 +1275,30 @@
           {
             "type": "palladium:overlay",
             "overlay": "alienevo:textures/models/prototype_omnitrix/prototype_inverted_#H.png"
+          },
+          {
+            "type": "palladium:color",
+            "color": "##GLOW_1",
+            "filter": "#b3ff40",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##GLOW_2",
+            "filter": "#a7f72e",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##GLOW_3",
+            "filter": "#8ed721",
+            "ignore_blank": true
           }
         ],
         "variables": {
-          "X": {
+          "WATCHSTATE": {
             "type": "palladium:string_property",
-            "property": "AlienEvo.Color"
+            "property": "watch_state"
           },
           "J": {
             "type": "palladium:objective_score",
@@ -834,37 +1307,201 @@
           "H": {
             "type": "palladium:objective_score",
             "objective": "AlienEvo.Invert"
+          },
+          "GLOW_1": {
+            "type": "palladium:string_property",
+            "property": "prototype_glow_color_1"
+          },
+          "GLOW_2": {
+            "type": "palladium:string_property",
+            "property": "prototype_glow_color_2"
+          },
+          "GLOW_3": {
+            "type": "palladium:string_property",
+            "property": "prototype_glow_color_3"
           }
-        },
-        "output": "alienevo:textures/models/prototype/glow/glowing_#X_#J_#H.png"
+        }
       },
       "conditions": [
         {
           "type": "palladium:objective_score",
           "objective": "Furry_Form",
-          "min_score": 0,
-          "max_score": 0
+          "min_score": 2,
+          "max_score": 2
         },
         {
-          "type": "palladium:not",
-          "conditions": [
-            {
-              "type": "palladium:or",
-              "conditions": [
-                {
-                  "type": "palladium:objective_score",
-                  "objective": "AlienEvo.10kPhase",
-                  "min_score": 1,
-                  "max_score": 1
-                },
-                {
-                  "type": "palladium:ability_unlocked",
-                  "power": "alienevo:prototype_omnitrix",
-                  "ability": "removed_core"
-                }
-              ]
-            }
-          ]
+          "type": "palladium:objective_score",
+          "objective": "AlienEvo.10kPhase",
+          "min_score": 0,
+          "max_score": 0
+        }
+      ]
+    },
+    {
+      "type": "geckolib:default",
+      "model": "anur:geo/10k_omnitrix_phase2.geo.json",
+      "animation_file": "alienevo:animations/omnitrix.animation.json",
+      "animation_controller": [
+        {
+          "name": "spin",
+          "transition_tick_time": 0,
+          "triggers": {
+            "scan_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.scan"
+              }
+            ],
+            "scan2_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.scan2"
+              }
+            ],
+            "spinl_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.spinleft"
+              }
+            ],
+            "spinr_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.spinright"
+              }
+            ],
+            "open_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.open"
+              }
+            ],
+            "close_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.close"
+              }
+            ],
+            "settings_trigger": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.settings_open"
+              }
+            ],
+            "settings_trigger_close": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.settings_close"
+              }
+            ],
+            "settings_trigger_right": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.settings_spinright"
+              }
+            ],
+            "code_right": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.alt_spinright"
+              }
+            ],
+            "code_left": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.alt_spinleft"
+              }
+            ],
+            "settings_trigger_left": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.settings_spinleft"
+              }
+            ],
+            "playlist_swap": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.playlistchange"
+              }
+            ],
+            "master_control": [
+              {
+                "type": "then_play_and_hold",
+                "animation": "animation.prototype.unlock_master"
+              }
+            ]
+          }
+        }
+      ],
+      "texture": {
+        "base": "alienevo:textures/models/prototype_omnitrix/prototype_glow_#WATCHSTATE.png",
+        "transformers": [
+          {
+            "type": "palladium:alpha_mask",
+            "mask": "alienevo:textures/models/alpha_masks/prototype/prototype_core_#J.png"
+          },
+          {
+            "type": "palladium:overlay",
+            "overlay": "alienevo:textures/models/prototype_omnitrix/prototype_inverted_#H.png"
+          },
+          {
+            "type": "palladium:color",
+            "color": "##GLOW_1",
+            "filter": "#b3ff40",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##GLOW_2",
+            "filter": "#a7f72e",
+            "ignore_blank": true
+          },
+          {
+            "type": "palladium:color",
+            "color": "##GLOW_3",
+            "filter": "#8ed721",
+            "ignore_blank": true
+          }
+        ],
+        "variables": {
+          "WATCHSTATE": {
+            "type": "palladium:string_property",
+            "property": "watch_state"
+          },
+          "J": {
+            "type": "palladium:objective_score",
+            "objective": "AlienEvo.NoCore"
+          },
+          "H": {
+            "type": "palladium:objective_score",
+            "objective": "AlienEvo.Invert"
+          },
+          "GLOW_1": {
+            "type": "palladium:string_property",
+            "property": "prototype_glow_color_1"
+          },
+          "GLOW_2": {
+            "type": "palladium:string_property",
+            "property": "prototype_glow_color_2"
+          },
+          "GLOW_3": {
+            "type": "palladium:string_property",
+            "property": "prototype_glow_color_3"
+          }
+        }
+      },
+      "conditions": [
+        {
+          "type": "palladium:objective_score",
+          "objective": "Furry_Form",
+          "min_score": 2,
+          "max_score": 2
+        },
+        {
+          "type": "palladium:objective_score",
+          "objective": "AlienEvo.10kPhase",
+          "min_score": 1,
+          "max_score": 1
         }
       ]
     },
@@ -1305,152 +1942,13 @@
     {
       "type": "geckolib:default",
       "model": {
-        "normal": "alienevo:geo/prototype_omnitrix.geo.json",
-        "slim": "alienevo:geo/prototype_omnitrix_slim.geo.json"
-      },
-      "render_type": "glow",
-      "animation_file": "alienevo:animations/omnitrix.animation.json",
-      "animation_controller": [
-        {
-          "name": "spin",
-          "transition_tick_time": 0,
-          "triggers": {
-            "scan_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.scan"
-              }
-            ],
-            "scan2_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.scan2"
-              }
-            ],
-            "spinl_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.spinleft"
-              }
-            ],
-            "spinr_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.spinright"
-              }
-            ],
-            "open_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.open"
-              }
-            ],
-            "close_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.close"
-              }
-            ],
-            "settings_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.settings_open"
-              }
-            ],
-            "settings_trigger_close": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.settings_close"
-              }
-            ],
-            "settings_trigger_right": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.settings_spinright"
-              }
-            ],
-            "settings_trigger_left": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.settings_spinleft"
-              }
-            ],
-            "code_right": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.alt_spinright"
-              }
-            ],
-            "code_left": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.alt_spinleft"
-              }
-            ],
-            "playlist_swap": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.playlistchange"
-              }
-            ],
-            "master_control": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.playlistchange"
-              }
-            ]
-          }
-        }
-      ],
-      "texture": {
-        "base": "alienevo:textures/models/prototype_omnitrix/destruct/self_destruct_#X.png",
-        "transformers": [],
-        "variables": {
-          "X": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.SdmFrame"
-          }
-        },
-        "output": "alienevo:textures/models/prototype_omnitrix/destruct/destructgenerated_#X.png"
-      },
-      "conditions": [
-        {
-          "type": "palladium:has_power",
-          "power": "selfdestruct:prototype_omnitrix_sdm"
-        },
-        {
-          "type": "palladium:not",
-          "conditions": [
-            {
-              "type": "palladium:or",
-              "conditions": [
-                {
-                  "type": "palladium:objective_score",
-                  "objective": "AlienEvo.10kPhase",
-                  "min_score": 1,
-                  "max_score": 1
-                },
-                {
-                  "type": "palladium:ability_unlocked",
-                  "power": "alienevo:prototype_omnitrix",
-                  "ability": "removed_core"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "geckolib:default",
-      "model": {
         "normal": "alienevo:geo/prototype_omnitrix_module_alt.geo.json",
         "slim": "alienevo:geo/prototype_omnitrix_slim_module_alt.geo.json"
       },
       "render_type": "glow",
       "animation_file": "alienevo:animations/omnitrix.animation.json",
       "texture": {
-        "base": "alienevo:textures/item/color_module_#X.png",
+        "base": "alienevo:textures/item/color_module.png",
         "transformers": [],
         "variables": {
           "X": {
@@ -1458,7 +1956,7 @@
             "property": "AlienEvo.Color"
           }
         },
-        "output": "alienevo:textures/models/prototype/glow/module_#X.png"
+        "output": "alienevo:textures/models/prototype/glow/module.png"
       },
       "conditions": [
         {
@@ -1507,7 +2005,7 @@
       "render_type": "glow",
       "animation_file": "alienevo:animations/omnitrix.animation.json",
       "texture": {
-        "base": "alienevo:textures/item/color_module_#X.png",
+        "base": "alienevo:textures/item/color_module.png",
         "transformers": [],
         "variables": {
           "X": {
@@ -1515,7 +2013,7 @@
             "property": "AlienEvo.PrimaryColor"
           }
         },
-        "output": "alienevo:textures/models/prototype/glow/mmodule_#X.png"
+        "output": "alienevo:textures/models/prototype/glow/mmodule.png"
       },
       "conditions": [
         {
@@ -1564,7 +2062,7 @@
       "render_type": "glow",
       "animation_file": "alienevo:animations/omnitrix.animation.json",
       "texture": {
-        "base": "alienevo:textures/item/color_module_#X.png",
+        "base": "alienevo:textures/item/color_module.png",
         "transformers": [],
         "variables": {
           "X": {
@@ -1572,7 +2070,7 @@
             "property": "AlienEvo.SecondaryColor"
           }
         },
-        "output": "alienevo:textures/models/prototype/glow/smodule_#X.png"
+        "output": "alienevo:textures/models/prototype/glow/smodule.png"
       },
       "conditions": [
         {
@@ -1808,704 +2306,6 @@
         "normal": "alienevo:geo/10k/10k_omnitrix.geo.json",
         "slim": "alienevo:geo/10k/10k_omnitrix_slim.geo.json"
       },
-      "animation_file": "alienevo:animations/omnitrix.animation.json",
-      "animation_controller": [
-        {
-          "name": "spin",
-          "transition_tick_time": 0,
-          "triggers": {
-            "scan_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.scan"
-              }
-            ],
-            "scan2_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.scan2"
-              }
-            ],
-            "spinl_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.spinleft"
-              }
-            ],
-            "spinr_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.spinright"
-              }
-            ],
-            "open_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.open"
-              }
-            ],
-            "close_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.close"
-              }
-            ],
-            "settings_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.settings_open"
-              }
-            ],
-            "settings_trigger_close": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.settings_close"
-              }
-            ],
-            "settings_trigger_right": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.settings_spinright"
-              }
-            ],
-            "settings_trigger_left": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.settings_spinleft"
-              }
-            ],
-            "playlist_swap": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.playlistchange"
-              }
-            ],
-            "code_right": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.alt_spinright"
-              }
-            ],
-            "code_left": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.alt_spinleft"
-              }
-            ],
-            "master_control": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.unlock_master"
-              }
-            ]
-          }
-        }
-      ],
-      "texture": {
-        "base": "alienevo:textures/models/prototype_omnitrix/prototype.png",
-        "transformers": [
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/base_primary/base_primary_#A.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/base_secondary/base_secondary_#B.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/base_tertiary/base_tertiary_#C.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/buttons/buttons_#D.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/core_side/core_side_#E.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/core_top/core_top_#F.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/dial_inner/dial_inner_#G.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/dial_outer/dial_outer_#H.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/tubes/tubes_#I.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/glow/prototype/glow_#X.png"
-          },
-          {
-            "type": "palladium:alpha_mask",
-            "mask": "alienevo:textures/models/alpha_masks/prototype/prototype_core_#J.png"
-          },
-          {
-            "type": "palladium:alpha_mask",
-            "mask": "alienevo:textures/models/alpha_masks/prototype/prototype_stage_#K.png"
-          }
-        ],
-        "variables": {
-          "A": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.BasePrimary"
-          },
-          "B": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.BaseSecondary"
-          },
-          "C": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.BaseTertiary"
-          },
-          "D": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.Buttons"
-          },
-          "E": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.CoreSide"
-          },
-          "F": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.CoreTop"
-          },
-          "G": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.DialInner"
-          },
-          "H": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.DialOuter"
-          },
-          "I": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.Tubes"
-          },
-          "J": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.NoCore"
-          },
-          "K": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.10kStage"
-          },
-          "X": {
-            "type": "palladium:string_property",
-            "property": "AlienEvo.Color"
-          }
-        },
-        "output": "alienevo:textures/models/prototype_omnitrix/parts_#A_#B_#C_#D_#E_#F_#G_#H_#I_#J_#K_#X.png"
-      },
-      "conditions": [
-        {
-          "type": "palladium:objective_score",
-          "objective": "AlienEvo.10kPhase",
-          "min_score": 1,
-          "max_score": 1
-        },
-        {
-          "type": "palladium:objective_score",
-          "objective": "Furry_Form",
-          "min_score": 0,
-          "max_score": 1
-        }
-      ]
-    },
-    {
-      "type": "geckolib:default",
-      "model": "anur:geo/10k_omnitrix_phase2.geo.json",
-      "animation_file": "alienevo:animations/omnitrix.animation.json",
-      "animation_controller": [
-        {
-          "name": "spin",
-          "transition_tick_time": 0,
-          "triggers": {
-            "scan_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.scan"
-              }
-            ],
-            "scan2_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.scan2"
-              }
-            ],
-            "spinl_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.spinleft"
-              }
-            ],
-            "spinr_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.spinright"
-              }
-            ],
-            "open_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.open"
-              }
-            ],
-            "close_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.close"
-              }
-            ],
-            "settings_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.settings_open"
-              }
-            ],
-            "settings_trigger_close": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.settings_close"
-              }
-            ],
-            "settings_trigger_right": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.settings_spinright"
-              }
-            ],
-            "settings_trigger_left": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.settings_spinleft"
-              }
-            ],
-            "playlist_swap": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.playlistchange"
-              }
-            ],
-            "code_right": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.alt_spinright"
-              }
-            ],
-            "code_left": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.alt_spinleft"
-              }
-            ],
-            "master_control": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.unlock_master"
-              }
-            ]
-          }
-        }
-      ],
-      "texture": {
-        "base": "alienevo:textures/models/prototype_omnitrix/prototype.png",
-        "transformers": [
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/base_primary/base_primary_#A.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/base_secondary/base_secondary_#B.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/base_tertiary/base_tertiary_#C.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/buttons/buttons_#D.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/core_side/core_side_#E.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/core_top/core_top_#F.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/dial_inner/dial_inner_#G.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/dial_outer/dial_outer_#H.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/tubes/tubes_#I.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/glow/prototype/glow_#X.png"
-          },
-          {
-            "type": "palladium:alpha_mask",
-            "mask": "alienevo:textures/models/alpha_masks/prototype/prototype_core_#J.png"
-          },
-          {
-            "type": "palladium:alpha_mask",
-            "mask": "alienevo:textures/models/alpha_masks/prototype/prototype_stage_#K.png"
-          }
-        ],
-        "variables": {
-          "A": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.BasePrimary"
-          },
-          "B": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.BaseSecondary"
-          },
-          "C": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.BaseTertiary"
-          },
-          "D": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.Buttons"
-          },
-          "E": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.CoreSide"
-          },
-          "F": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.CoreTop"
-          },
-          "G": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.DialInner"
-          },
-          "H": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.DialOuter"
-          },
-          "I": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.Tubes"
-          },
-          "J": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.NoCore"
-          },
-          "K": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.10kStage"
-          },
-          "X": {
-            "type": "palladium:string_property",
-            "property": "AlienEvo.Color"
-          }
-        },
-        "output": "alienevo:textures/models/prototype_omnitrix/parts_#A_#B_#C_#D_#E_#F_#G_#H_#I_#J_#K_#X.png"
-      },
-      "conditions": [
-        {
-          "type": "palladium:objective_score",
-          "objective": "AlienEvo.10kPhase",
-          "min_score": 1,
-          "max_score": 1
-        },
-        {
-          "type": "palladium:objective_score",
-          "objective": "Furry_Form",
-          "min_score": 2,
-          "max_score": 2
-        }
-      ]
-    },
-    {
-      "type": "geckolib:default",
-      "model": {
-        "normal": "alienevo:geo/10k/10k_omnitrix.geo.json",
-        "slim": "alienevo:geo/10k/10k_omnitrix_slim.geo.json"
-      },
-      "render_type": "glow",
-      "animation_file": "alienevo:animations/omnitrix.animation.json",
-      "animation_controller": [
-        {
-          "name": "spin",
-          "transition_tick_time": 0,
-          "triggers": {
-            "scan_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.scan"
-              }
-            ],
-            "scan2_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.scan2"
-              }
-            ],
-            "spinl_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.spinleft"
-              }
-            ],
-            "spinr_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.spinright"
-              }
-            ],
-            "open_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.open"
-              }
-            ],
-            "close_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.close"
-              }
-            ],
-            "settings_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.settings_open"
-              }
-            ],
-            "settings_trigger_close": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.settings_close"
-              }
-            ],
-            "settings_trigger_right": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.settings_spinright"
-              }
-            ],
-            "settings_trigger_left": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.settings_spinleft"
-              }
-            ],
-            "code_right": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.alt_spinright"
-              }
-            ],
-            "code_left": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.alt_spinleft"
-              }
-            ],
-            "playlist_swap": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.playlistchange"
-              }
-            ],
-            "master_control": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.unlock_master"
-              }
-            ]
-          }
-        }
-      ],
-      "texture": {
-        "base": "alienevo:textures/models/glow/prototype/glow_#X.png",
-        "transformers": [
-          {
-            "type": "palladium:alpha_mask",
-            "mask": "alienevo:textures/models/alpha_masks/prototype/prototype_core_#J.png"
-          },
-          {
-            "type": "palladium:overlay",
-            "overlay": "alienevo:textures/models/prototype_omnitrix/prototype_inverted_#H.png"
-          }
-        ],
-        "variables": {
-          "X": {
-            "type": "palladium:string_property",
-            "property": "AlienEvo.Color"
-          },
-          "J": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.NoCore"
-          },
-          "H": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.Invert"
-          }
-        },
-        "output": "alienevo:textures/models/prototype/glow/glowing10k_#X_#J_#H.png"
-      },
-      "conditions": [
-        {
-          "type": "palladium:objective_score",
-          "objective": "AlienEvo.10kPhase",
-          "min_score": 1,
-          "max_score": 1
-        },
-        {
-          "type": "palladium:objective_score",
-          "objective": "Furry_Form",
-          "min_score": 0,
-          "max_score": 0
-        }
-      ]
-    },
-    {
-      "type": "geckolib:default",
-      "model": {
-        "normal": "alienevo:geo/10k/10k_omnitrix.geo.json",
-        "slim": "alienevo:geo/10k/10k_omnitrix_slim.geo.json"
-      },
-      "texture": "alienevo:textures/models/glow/prototype/glow_red.png",
-      "render_type": "glow",
-      "animation_file": "alienevo:animations/omnitrix.animation.json",
-      "animation_controller": [
-        {
-          "name": "spin",
-          "transition_tick_time": 0,
-          "triggers": {
-            "scan_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.scan"
-              }
-            ],
-            "scan2_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.scan2"
-              }
-            ],
-            "spinl_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.spinleft"
-              }
-            ],
-            "spinr_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.spinright"
-              }
-            ],
-            "open_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.open"
-              }
-            ],
-            "close_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.close"
-              }
-            ],
-            "settings_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.settings_open"
-              }
-            ],
-            "settings_trigger_close": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.settings_close"
-              }
-            ],
-            "settings_trigger_right": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.settings_spinright"
-              }
-            ],
-            "settings_trigger_left": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.settings_spinleft"
-              }
-            ],
-            "code_right": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.alt_spinright"
-              }
-            ],
-            "code_left": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.alt_spinleft"
-              }
-            ],
-            "playlist_swap": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.playlistchange"
-              }
-            ],
-            "master_control": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.unlock_master"
-              }
-            ]
-          }
-        }
-      ],
-      "conditions": [
-        {
-          "type": "palladium:objective_score",
-          "objective": "AlienEvo.10kPhase",
-          "min_score": 1,
-          "max_score": 1
-        },
-        {
-          "type": "palladium:objective_score",
-          "objective": "AlienEvo.Timer",
-          "min_score": 1,
-          "max_score": 3000
-        },
-        {
-          "type": "palladium:objective_score",
-          "objective": "Furry_Form",
-          "min_score": 0,
-          "max_score": 0
-        }
-      ]
-    },
-    {
-      "type": "geckolib:default",
-      "model": {
-        "normal": "alienevo:geo/10k/10k_omnitrix.geo.json",
-        "slim": "alienevo:geo/10k/10k_omnitrix_slim.geo.json"
-      },
       "texture": "alienevo:textures/models/glow/prototype/glow_scan.png",
       "render_type": "glow",
       "animation_file": "alienevo:animations/omnitrix.animation.json",
@@ -2949,145 +2749,6 @@
           "objective": "AlienEvo.10kPhase",
           "min_score": 1,
           "max_score": 1
-        }
-      ]
-    },
-    {
-      "type": "geckolib:default",
-      "model": {
-        "normal": "alienevo:geo/10k/10k_omnitrix.geo.json",
-        "slim": "alienevo:geo/10k/10k_omnitrix_slim.geo.json"
-      },
-      "render_type": "glow",
-      "animation_file": "alienevo:animations/omnitrix.animation.json",
-      "animation_controller": [
-        {
-          "name": "spin",
-          "transition_tick_time": 0,
-          "triggers": {
-            "scan_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.scan"
-              }
-            ],
-            "scan2_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.scan2"
-              }
-            ],
-            "spinl_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.spinleft"
-              }
-            ],
-            "spinr_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.spinright"
-              }
-            ],
-            "open_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.open"
-              }
-            ],
-            "close_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.close"
-              }
-            ],
-            "settings_trigger": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.settings_open"
-              }
-            ],
-            "settings_trigger_close": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.settings_close"
-              }
-            ],
-            "settings_trigger_right": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.settings_spinright"
-              }
-            ],
-            "settings_trigger_left": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.settings_spinleft"
-              }
-            ],
-            "code_right": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.alt_spinright"
-              }
-            ],
-            "code_left": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.alt_spinleft"
-              }
-            ],
-            "playlist_swap": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.playlistchange"
-              }
-            ],
-            "master_control": [
-              {
-                "type": "then_play_and_hold",
-                "animation": "animation.prototype.unlock_master"
-              }
-            ]
-          }
-        }
-      ],
-      "texture": {
-        "base": "alienevo:textures/models/prototype_omnitrix/destruct/self_destruct_#X.png",
-        "transformers": [],
-        "variables": {
-          "X": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.SdmFrame"
-          }
-        },
-        "output": "alienevo:textures/models/prototype_omnitrix/destruct/destructgenerated_#X.png"
-      },
-      "conditions": [
-        {
-          "type": "palladium:has_power",
-          "power": "selfdestruct:prototype_omnitrix_sdm"
-        },
-        {
-          "type": "palladium:objective_score",
-          "objective": "AlienEvo.10kPhase",
-          "min_score": 1,
-          "max_score": 1
-        },
-        {
-          "type": "palladium:not",
-          "conditions": [
-            {
-              "type": "palladium:or",
-              "conditions": [
-                {
-                  "type": "palladium:ability_unlocked",
-                  "power": "alienevo:prototype_omnitrix",
-                  "ability": "removed_core"
-                }
-              ]
-            }
-          ]
         }
       ]
     },
@@ -3100,7 +2761,7 @@
       "render_type": "glow",
       "animation_file": "alienevo:animations/omnitrix.animation.json",
       "texture": {
-        "base": "alienevo:textures/item/color_module_#X.png",
+        "base": "alienevo:textures/item/color_module.png",
         "transformers": [],
         "variables": {
           "X": {
@@ -3108,7 +2769,7 @@
             "property": "AlienEvo.Color"
           }
         },
-        "output": "alienevo:textures/models/prototype/glow/module_#X.png"
+        "output": "alienevo:textures/models/prototype/glow/module.png"
       },
       "conditions": [
         {
@@ -3157,7 +2818,7 @@
       "render_type": "glow",
       "animation_file": "alienevo:animations/omnitrix.animation.json",
       "texture": {
-        "base": "alienevo:textures/item/color_module_#X.png",
+        "base": "alienevo:textures/item/color_module.png",
         "transformers": [],
         "variables": {
           "X": {
@@ -3165,7 +2826,7 @@
             "property": "AlienEvo.PrimaryColor"
           }
         },
-        "output": "alienevo:textures/models/prototype/glow/mmodule_#X.png"
+        "output": "alienevo:textures/models/prototype/glow/mmodule.png"
       },
       "conditions": [
         {
@@ -3214,7 +2875,7 @@
       "render_type": "glow",
       "animation_file": "alienevo:animations/omnitrix.animation.json",
       "texture": {
-        "base": "alienevo:textures/item/color_module_#X.png",
+        "base": "alienevo:textures/item/color_module.png",
         "transformers": [],
         "variables": {
           "X": {
@@ -3222,7 +2883,7 @@
             "property": "AlienEvo.SecondaryColor"
           }
         },
-        "output": "alienevo:textures/models/prototype/glow/smodule_#X.png"
+        "output": "alienevo:textures/models/prototype/glow/smodule.png"
       },
       "conditions": [
         {

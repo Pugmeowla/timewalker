@@ -104,25 +104,9 @@
       "conditions": [
         {
           "type": "palladium:objective_score",
-          "objective": "Furry_Form",
+          "objective": "timewalker_scan",
           "min_score": 0,
           "max_score": 1
-        },
-        {
-          "type": "palladium:not",
-          "conditions": [
-            {
-              "type": "palladium:or",
-              "conditions": [
-                {
-                  "type": "palladium:objective_score",
-                  "objective": "AlienEvo.10kPhase",
-                  "min_score": 1,
-                  "max_score": 1
-                }
-              ]
-            }
-          ]
         }
       ]
     },
@@ -174,12 +158,6 @@
       "texture": "alienevo:textures/models/sil/alien_143.png",
       "conditions": [
         {
-          "type": "palladium:objective_score",
-          "objective": "AlienEvo.10kPhase",
-          "min_score": 0,
-          "max_score": 0
-        },
-        {
           "type": "palladium:not",
           "conditions": [
             {
@@ -187,15 +165,11 @@
               "conditions": [
                 {
                   "type": "palladium:objective_score",
-                  "objective": "Furry_Form",
+                  "objective": "timewalker_scan",
                   "min_score": 2,
                   "max_score": 4
-                },
-                {
-                  "type": "palladium:ability_unlocked",
-                  "power": "alienevo:prototype_omnitrix",
-                  "ability": "removed_core"
                 }
+                
               ]
             }
           ]
@@ -306,7 +280,7 @@
       "conditions": [
         {
           "type": "palladium:objective_score",
-          "objective": "Furry_Form",
+          "objective": "timewalker_scan",
           "min_score": 0,
           "max_score": 1
         },
@@ -316,12 +290,6 @@
             {
               "type": "palladium:or",
               "conditions": [
-                {
-                  "type": "palladium:objective_score",
-                  "objective": "AlienEvo.10kPhase",
-                  "min_score": 1,
-                  "max_score": 1
-                }
               ]
             }
           ]

@@ -14,5 +14,9 @@
         "sounds":[
             "timewalker:ticking"
         ]
-    }
+    },
+     "scanning": {
+    "category": "player",
+    "sounds": ["timewalker:scanning"]
+  }
 }

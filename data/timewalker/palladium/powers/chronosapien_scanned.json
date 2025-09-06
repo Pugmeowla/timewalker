@@ -11,7 +11,7 @@
   "secondary_color": "#332e27",
   "ability_bar_texture": "alienevo:textures/gui/ability_bar/interface.png",
   "abilities": {
-    "furry_loop": {
+    "scan_loop": {
       "type": "palladium:command",
       "hidden": false,
       "title": "Furry Species",
@@ -22,14 +22,13 @@
       "description": "A wolf-like alien with enhanced agility and senses, capable of unleashing powerful sonic howls and leaping great distances",
       "icon": "alienevo:textures/gui/playlists/playlist_1/alien_209.png",
       "first_tick_commands": [
-        "scoreboard players set @s Furry_Form 1",
         "alienautoadd @s timewalker:chronosapien"
       ],
       "last_tick_commands": [
         
       ],
       "commands": [
-        "function anur:counter2",
+        "scoreboard players add @s timewalker_scan 1",
         "scoreboard players set @s AlienEvo.SelfDestruct 0",
         "scoreboard players set @s AlienEvo.SdmFrame 0",
         "scoreboard players set @s AlienEvo.SdmBlink 0",
@@ -38,7 +37,7 @@
         "superpower remove alienevo:quick_change"
       ]
     },
-    "begone_thot": {
+    "replace": {
       "type": "palladium:command",
       "hidden": false,
       "title": "Furry Species",
@@ -49,11 +48,11 @@
       "description": "A wolf-like alien with enhanced agility and senses, capable of unleashing powerful sonic howls and leaping great distances",
       "icon": "alienevo:textures/gui/playlists/playlist_1/alien_209.png",
       "first_tick_commands": [
-        "scoreboard players set @s Furry_Form 0",
         "superpower replace timewalker:chronosapien_scanned alienevo:prototype_omnitrix"
       ],
       "last_tick_commands": [
-        "scoreboard players set @s Not_Furry 0"
+        "scoreboard players set @s timewalker_scan 0",
+        "superpower add alienevo:prototype_omnitrix"
       ],
       "commands": [
       ],
@@ -61,7 +60,7 @@
         "enabling": [
           {
             "type": "palladium:objective_score",
-            "objective": "Not_Furry",
+            "objective": "timewalker_scan",
             "min_score": 120,
             "max_score": 120
           }
@@ -72,19 +71,15 @@
       "type": "palladium:command",
       "hidden": true,
       "first_tick_commands": [
-        "playsound alienevo:scanning master @s"
+        "playsound timewalker:scanning master @s"
       ],
-      "last_tick_commands": [
-        ""
-      ],
-      "commands": [
-        ""
-      ],
+      "last_tick_commands": [],
+      "commands": [],
       "conditions": {
         "enabling": [
           {
             "type": "palladium:objective_score",
-            "objective": "Not_Furry",
+            "objective": "timewalker_scan",
             "min_score": 1,
             "max_score": 5
           },
@@ -108,7 +103,7 @@
         "enabling": [
           {
             "type": "palladium:objective_score",
-            "objective": "Not_Furry",
+            "objective": "timewalker_scan",
             "min_score": 10,
             "max_score": 105
           },
@@ -122,7 +117,7 @@
         ]
       }
     },
-    "absolute_cinema": {
+    "show_arm": {
       "type": "palladium:show_both_arms",
       "icon": "minecraft:blaze_rod",
       "title": "null",
@@ -134,7 +129,7 @@
         "enabling": [
           {
             "type": "palladium:objective_score",
-            "objective": "Not_Furry",
+            "objective": "timewalker_scan",
             "min_score": 10,
             "max_score": 115
           },
@@ -260,30 +255,6 @@
         ]
       }
     },
-    "scan_geo": {
-      "type": "geckolib:render_layer_animation",
-      "hidden": true,
-      "render_layer": "timewalker:chronosapien_omnitrix",
-      "controller": "spin",
-      "animation_trigger": "scan2_trigger",
-      "conditions": {
-        "enabling": [
-          {
-            "type": "palladium:objective_score",
-            "objective": "Not_Furry",
-            "min_score": 20,
-            "max_score": 100
-          },
-          {
-            "type": "palladium:not",
-            "conditions": {
-              "type": "palladium:has_tag",
-              "tag": "AlienEvo.Transformation"
-            }
-          }
-        ]
-      }
-    },
     "base_form": {
       "type": "alienevo:omnitrix_detransform",
       "icon": "#alienevo:detransform",
@@ -306,10 +277,34 @@
         ]
       }
     },
-    "renderLayer2": {
+     "scan_geo-2": {
+      "type": "geckolib:render_layer_animation",
+      "hidden": true,
+      "render_layer": "timewalker:omnitrix",
+      "controller": "spin",
+      "animation_trigger": "scan2_trigger",
+      "conditions": {
+        "enabling": [
+          {
+            "type": "palladium:objective_score",
+            "objective": "timewalker_scan",
+            "min_score": 20,
+            "max_score": 100
+          },
+          {
+            "type": "palladium:not",
+            "conditions": {
+              "type": "palladium:has_tag",
+              "tag": "AlienEvo.Transformation"
+            }
+          }
+        ]
+      }
+    },
+    "renderLayer2-2": {
       "type": "palladium:render_layer",
       "hidden": true,
-      "render_layer": "timewalker:chronosapien_omnitrix",
+      "render_layer": "timewalker:omnitrix",
       "conditions": {
         "enabling": [
           {

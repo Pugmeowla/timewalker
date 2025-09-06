@@ -2,3 +2,4 @@ scoreboard objectives add paradox_portal_lifetime dummy
 scoreboard objectives add eon_portal_lifetime dummy
 scoreboard objectives add chrono_meter dummy
 scoreboard objectives add eon_meter dummy
+scoreboard objectives add timewalker_scan dummy
