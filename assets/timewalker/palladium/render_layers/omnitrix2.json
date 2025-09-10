@@ -101,7 +101,7 @@
         }
       ],
       "texture": {
-        "base": "timewalker:textures/models/prototype_omnitrix/prototype.png"
+        "base": "timewalker:textures/models/prototype_omnitrix/prototype2.png"
       },
       "conditions": [
         {
@@ -213,7 +213,7 @@
         }
       ],
       "texture": {
-        "base": "timewalker:textures/models/prototype_omnitrix/prototype.png"
+        "base": "timewalker:textures/models/prototype_omnitrix/prototype2.png"
       },
       "conditions": [
        
@@ -1106,7 +1106,7 @@
         }
       ],
       "texture": {
-        "base": "alienevo:textures/models/sil/alien_143.png",
+        "base": "alienevo:textures/models/sil/alien_123.png",
         "transformers": [
           {
             "type": "palladium:color",
@@ -1196,7 +1196,7 @@
         }
       ],
       "texture": {
-        "base": "alienevo:textures/models/sil/alien_143.png",
+        "base": "alienevo:textures/models/sil/alien_123.png",
         "transformers": [
           {
             "type": "palladium:color",

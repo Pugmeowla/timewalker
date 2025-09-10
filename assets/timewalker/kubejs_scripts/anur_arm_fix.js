@@ -4,7 +4,7 @@ PalladiumEvents.registerAnimations((event) => {
          let activation1 = animationUtil.getAnimationTimerAbilityValue(
             builder.getPlayer(), 'anur:furryscanned', 'rollcredits', builder.getPartialTicks()
         ); let activation2 = animationUtil.getAnimationTimerAbilityValue(
-            builder.getPlayer(), 'timewalker:eon_scanned2', 'rollcredits', builder.getPartialTicks()
+            builder.getPlayer(), 'timewalker:chronian_scanned', 'rollcredits', builder.getPartialTicks()
         );
          let activation3 = animationUtil.getAnimationTimerAbilityValue(
             builder.getPlayer(), 'timewalker:chronosapien_scanned', 'rollcredits', builder.getPartialTicks()
