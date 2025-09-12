@@ -334,34 +334,8 @@
           }
         }
       ],
-      "texture": {
-        "base": "alienevo:textures/models/prototype_omnitrix/prototype_glow_#WATCHSTATE.png",
-        "variables": {
-          "WATCHSTATE": {
-            "type": "palladium:string_property",
-            "property": "watch_state"
-          },
-          "J": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.NoCore"
-          },
-          "H": {
-            "type": "palladium:objective_score",
-            "objective": "AlienEvo.Invert"
-          },
-          "GLOW_1": {
-            "type": "palladium:string_property",
-            "property": "prototype_glow_color_1"
-          },
-          "GLOW_2": {
-            "type": "palladium:string_property",
-            "property": "prototype_glow_color_2"
-          },
-          "GLOW_3": {
-            "type": "palladium:string_property",
-            "property": "prototype_glow_color_3"
-          }
-        }
+       "texture": {
+        "base": "timewalker:textures/models/prototype_omnitrix/prototype.png"
       },
       "conditions": [
         {
@@ -471,27 +445,8 @@
           }
         }
       ],
-      "texture": {
-        "base": "alienevo:textures/models/prototype_omnitrix/prototype_glow_#WATCHSTATE.png",
-       
-        "variables": {
-          "WATCHSTATE": {
-            "type": "palladium:string_property",
-            "property": "watch_state"
-          },
-          "GLOW_1": {
-            "type": "palladium:string_property",
-            "property": "prototype_glow_color_1"
-          },
-          "GLOW_2": {
-            "type": "palladium:string_property",
-            "property": "prototype_glow_color_2"
-          },
-          "GLOW_3": {
-            "type": "palladium:string_property",
-            "property": "prototype_glow_color_3"
-          }
-        }
+        "texture": {
+        "base": "timewalker:textures/models/prototype_omnitrix/prototype.png"
       },
       "conditions": [
         {
@@ -509,7 +464,9 @@
         "normal": "alienevo:geo/prototype_omnitrix.geo.json",
         "slim": "alienevo:geo/prototype_omnitrix_slim.geo.json"
       },
-      "texture": "alienevo:textures/models/glow/prototype/glow_red.png",
+         "texture": {
+        "base": "timewalker:textures/models/prototype_omnitrix/prototype.png"
+      },
       "render_type": "glow",
       "animation_file": "alienevo:animations/omnitrix.animation.json",
       "animation_controller": [
@@ -636,7 +593,9 @@
         "normal": "alienevo:geo/prototype_omnitrix.geo.json",
         "slim": "alienevo:geo/prototype_omnitrix_slim.geo.json"
       },
-      "texture": "alienevo:textures/models/glow/prototype/glow_scan.png",
+         "texture": {
+        "base": "timewalker:textures/models/prototype_omnitrix/prototype.png"
+      },
       "render_type": "glow",
       "animation_file": "alienevo:animations/omnitrix.animation.json",
       "animation_controller": [
@@ -674,7 +633,9 @@
         "normal": "alienevo:geo/prototype_omnitrix.geo.json",
         "slim": "alienevo:geo/prototype_omnitrix_slim.geo.json"
       },
-      "texture": "alienevo:textures/models/prototype_omnitrix/tubes/tubes_scan.png",
+      "texture": {
+        "base": "timewalker:textures/models/prototype_omnitrix/prototype.png"
+      },
       "render_type": "glow",
       "animation_file": "alienevo:animations/omnitrix.animation.json",
       "animation_controller": [
@@ -785,7 +746,9 @@
         "normal": "alienevo:geo/prototype_omnitrix.geo.json",
         "slim": "alienevo:geo/prototype_omnitrix_slim.geo.json"
       },
-      "texture": "alienevo:textures/models/prototype_omnitrix/tubes/tubes_scan.png",
+    "texture": {
+        "base": "timewalker:textures/models/prototype_omnitrix/prototype.png"
+      },
       "render_type": "glow",
       "animation_file": "alienevo:animations/omnitrix.animation.json",
       "animation_controller": [
@@ -897,16 +860,8 @@
       },
       "render_type": "glow",
       "animation_file": "alienevo:animations/omnitrix.animation.json",
-      "texture": {
-        "base": "alienevo:textures/item/color_module.png",
-        "transformers": [],
-        "variables": {
-          "X": {
-            "type": "palladium:string_property",
-            "property": "AlienEvo.Color"
-          }
-        },
-        "output": "alienevo:textures/models/prototype/glow/module.png"
+       "texture": {
+        "base": "timewalker:textures/models/prototype_omnitrix/prototype.png"
       },
       "conditions": [
         {
@@ -954,16 +909,8 @@
       },
       "render_type": "glow",
       "animation_file": "alienevo:animations/omnitrix.animation.json",
-      "texture": {
-        "base": "alienevo:textures/item/color_module.png",
-        "transformers": [],
-        "variables": {
-          "X": {
-            "type": "palladium:string_property",
-            "property": "AlienEvo.PrimaryColor"
-          }
-        },
-        "output": "alienevo:textures/models/prototype/glow/mmodule.png"
+        "texture": {
+        "base": "timewalker:textures/models/prototype_omnitrix/prototype.png"
       },
       "conditions": [
         {
@@ -1011,16 +958,8 @@
       },
       "render_type": "glow",
       "animation_file": "alienevo:animations/omnitrix.animation.json",
-      "texture": {
-        "base": "alienevo:textures/item/color_module.png",
-        "transformers": [],
-        "variables": {
-          "X": {
-            "type": "palladium:string_property",
-            "property": "AlienEvo.SecondaryColor"
-          }
-        },
-        "output": "alienevo:textures/models/prototype/glow/smodule.png"
+        "texture": {
+        "base": "timewalker:textures/models/prototype_omnitrix/prototype.png"
       },
       "conditions": [
         {
@@ -1246,7 +1185,9 @@
         "normal": "alienevo:geo/10k/10k_omnitrix.geo.json",
         "slim": "alienevo:geo/10k/10k_omnitrix_slim.geo.json"
       },
-      "texture": "alienevo:textures/models/glow/prototype/glow_scan.png",
+         "texture": {
+        "base": "timewalker:textures/models/prototype_omnitrix/prototype.png"
+      },
       "render_type": "glow",
       "animation_file": "alienevo:animations/omnitrix.animation.json",
       "animation_controller": [
@@ -1357,7 +1298,9 @@
         "normal": "alienevo:geo/10k/10k_omnitrix.geo.json",
         "slim": "alienevo:geo/10k/10k_omnitrix_slim.geo.json"
       },
-      "texture": "alienevo:textures/models/glow/prototype/glow_scan.png",
+     "texture": {
+        "base": "timewalker:textures/models/prototype_omnitrix/prototype.png"
+      },
       "render_type": "glow",
       "animation_file": "alienevo:animations/omnitrix.animation.json",
       "animation_controller": [
@@ -1467,7 +1410,9 @@
         "normal": "alienevo:geo/10k/10k_omnitrix.geo.json",
         "slim": "alienevo:geo/10k/10k_omnitrix_slim.geo.json"
       },
-      "texture": "alienevo:textures/models/prototype_omnitrix/tubes/tubes_scan.png",
+    "texture": {
+        "base": "timewalker:textures/models/prototype_omnitrix/prototype.png"
+      },
       "render_type": "glow",
       "animation_file": "alienevo:animations/omnitrix.animation.json",
       "animation_controller": [
@@ -1578,7 +1523,9 @@
         "normal": "alienevo:geo/10k/10k_omnitrix.geo.json",
         "slim": "alienevo:geo/10k/10k_omnitrix_slim.geo.json"
       },
-      "texture": "alienevo:textures/models/prototype_omnitrix/tubes/tubes_scan.png",
+    "texture": {
+        "base": "timewalker:textures/models/prototype_omnitrix/prototype.png"
+      },
       "render_type": "glow",
       "animation_file": "alienevo:animations/omnitrix.animation.json",
       "animation_controller": [
@@ -1690,16 +1637,8 @@
       },
       "render_type": "glow",
       "animation_file": "alienevo:animations/omnitrix.animation.json",
-      "texture": {
-        "base": "alienevo:textures/item/color_module.png",
-        "transformers": [],
-        "variables": {
-          "X": {
-            "type": "palladium:string_property",
-            "property": "AlienEvo.Color"
-          }
-        },
-        "output": "alienevo:textures/models/prototype/glow/module.png"
+       "texture": {
+        "base": "timewalker:textures/models/prototype_omnitrix/prototype.png"
       },
       "conditions": [
         {
@@ -1747,16 +1686,8 @@
       },
       "render_type": "glow",
       "animation_file": "alienevo:animations/omnitrix.animation.json",
-      "texture": {
-        "base": "alienevo:textures/item/color_module.png",
-        "transformers": [],
-        "variables": {
-          "X": {
-            "type": "palladium:string_property",
-            "property": "AlienEvo.PrimaryColor"
-          }
-        },
-        "output": "alienevo:textures/models/prototype/glow/mmodule.png"
+        "texture": {
+        "base": "timewalker:textures/models/prototype_omnitrix/prototype.png"
       },
       "conditions": [
         {
@@ -1804,16 +1735,8 @@
       },
       "render_type": "glow",
       "animation_file": "alienevo:animations/omnitrix.animation.json",
-      "texture": {
-        "base": "alienevo:textures/item/color_module.png",
-        "transformers": [],
-        "variables": {
-          "X": {
-            "type": "palladium:string_property",
-            "property": "AlienEvo.SecondaryColor"
-          }
-        },
-        "output": "alienevo:textures/models/prototype/glow/smodule.png"
+        "texture": {
+        "base": "timewalker:textures/models/prototype_omnitrix/prototype.png"
       },
       "conditions": [
         {
